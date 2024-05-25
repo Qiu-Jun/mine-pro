@@ -67,20 +67,5 @@
     "unocss": "^0.58.0",
     "unocss-preset-weapp": "^0.57.1",
     "vite": "^4.5.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
-  },
-  "engines": {
-    "node": ">=16 <20",
-    "pnpm": ">=8"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
   }
 }
