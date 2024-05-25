@@ -2,21 +2,19 @@
  * @Description: md
  * @Author: June
  * @Date: 2024-04-24 09:32:13
- * @FilePath: \uni-cli-template\README.md
- * @LastEditTime: 2024-04-24 10:51:18
+ * @FilePath: \mine-pro\README.md
+ * @LastEditTime: 2024-05-25 16:03:17
  * @LastEditors: June
 -->
 
-## uni-cli-template
+## mini-pro
 
-#### 技术栈
+#### 目录说梦
 
-- Node 16.20.1
-- pnpm 8.6.3
-- vue3
-- typescript
-- pinia
-- uniapp
+- packages
+  - admin 后台
+  - weapp 移动端
+  - server 服务端
 
 #### 使用
 
@@ -26,6 +24,7 @@ npm install pnpm -g
 
 pnpm install
 
+# 启动uniapp
 pnpm dev:weapp
 
 # 提交代码
@@ -76,11 +75,3 @@ pnpm commit # 使用此命令编写commit
   "LastEditors": "Your Name"
 },
 ```
-
-#### TODO
-
-- [x] uni脚手架初始化
-- [x] 环境变量
-- [x] eslint + prettier + husky
-- [x] unocss
-- [x] commit cz
