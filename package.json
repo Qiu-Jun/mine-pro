@@ -1,9 +1,13 @@
 {
-  "name": "uni_vite_vue3_template",
+  "name": "mine-pro",
   "version": "0.0.1",
+  "description": "mine-pro",
+  "author": "June",
+  "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev:weapp": "pnpm run -C packages/weapp dev:mp-weixin",
+    "dev:server": "pnpm run -C packages/server start:dev",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint --ext .vue,.js,.ts,.jsx,.tsx src --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
