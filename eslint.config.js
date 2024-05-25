@@ -4,7 +4,7 @@
  * @Date: 2024-05-25 15:48:42
  * @LastEditTime: 2024-05-25 15:57:41
  * @LastEditors: June
- * @FilePath: \mine-pro\eslint.config.js
+ * @FilePath: \@minepro\eslint.config.js
  */
 module.exports = {
   env: {

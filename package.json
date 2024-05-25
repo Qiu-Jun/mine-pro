@@ -1,13 +1,14 @@
 {
-  "name": "mine-pro",
+  "name": "@minepro",
   "version": "0.0.1",
-  "description": "mine-pro",
+  "description": "@minepro",
   "author": "June",
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev:weapp": "pnpm run -C packages/weapp dev:mp-weixin",
     "dev:server": "pnpm run -C packages/server start:dev",
+    "dev:admin": "pnpm run -C packages/admin dev",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint --ext .vue,.js,.ts,.jsx,.tsx src --fix",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
@@ -42,7 +43,24 @@
   },
   "engines": {
     "node": ">=16 <20",
-    "pnpm": ">=8"
+    "pnpm": ">=9.0.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "pnpm": {
+    "overrides": {},
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "typescript-eslint>eslint": "^9.0.0",
+        "@typescript-eslint/eslint-plugin>eslint": "^9.0.0",
+        "@typescript-eslint/parser>eslint": "^9.0.0",
+        "@typescript-eslint/type-utils>eslint": "^9.0.0",
+        "@typescript-eslint/utils>eslint": "^9.0.0",
+        "eslint-plugin-import>eslint": "^9.0.0",
+        "eslint-plugin-unused-imports>eslint": "^9.0.0"
+      }
+    }
   },
   "lint-staged": {
     "packages/**/.{js,jsx,ts,tsx,json}": [

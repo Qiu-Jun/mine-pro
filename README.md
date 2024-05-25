@@ -2,7 +2,7 @@
  * @Description: md
  * @Author: June
  * @Date: 2024-04-24 09:32:13
- * @FilePath: \mine-pro\README.md
+ * @FilePath: \@minepro\README.md
  * @LastEditTime: 2024-05-25 16:03:17
  * @LastEditors: June
 -->

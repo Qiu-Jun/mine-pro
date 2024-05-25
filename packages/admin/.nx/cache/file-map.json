@@ -1,0 +1,1814 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.1.0",
+  "deps": {
+    "@ant-design/icons-vue": "~7.0.1",
+    "@iconify/vue": "^4.1.2",
+    "@tinymce/tinymce-vue": "^5.1.1",
+    "@vueuse/core": "~10.9.0",
+    "ant-design-vue": "~4.2.1",
+    "axios": "~1.6.8",
+    "crypto-js": "^4.2.0",
+    "dayjs": "~1.11.11",
+    "echarts": "^5.5.0",
+    "file-saver": "~2.0.5",
+    "lodash-es": "~4.17.21",
+    "mitt": "~3.0.1",
+    "nprogress": "~1.0.0-1",
+    "pinia": "~2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "qiniu-js": "^3.4.2",
+    "qs": "~6.12.1",
+    "sortablejs": "~1.15.2",
+    "tinymce": "^6.8.3",
+    "vue": "~3.4.27",
+    "vue-echarts": "^6.7.2",
+    "vue-i18n": "9.13.1",
+    "vue-router": "~4.3.2",
+    "vue-types": "~5.1.2",
+    "vue-virtual-scroller": "2.0.0-beta.8",
+    "xlsx": "~0.18.5",
+    "@minepro/components": "workspace:*",
+    "@minepro/vite-plugin-http2-proxy": "workspace:*",
+    "@minepro/vite-plugin-msw": "workspace:*",
+    "@minepro/vite-plugin-tinymce-resource": "workspace:*",
+    "@faker-js/faker": "^8.4.1",
+    "@iconify-json/ant-design": "^1.1.16",
+    "@iconify-json/ep": "^1.1.15",
+    "@iconify/json": "^2.2.211",
+    "@types/crypto-js": "^4.2.2",
+    "@types/lodash-es": "~4.17.12",
+    "@types/node": "~20.12.12",
+    "@types/qs": "^6.9.15",
+    "@types/sortablejs": "^1.15.8",
+    "@typescript-eslint/eslint-plugin": "~7.9.0",
+    "@typescript-eslint/parser": "~7.9.0",
+    "@umijs/openapi": "^1.12.1",
+    "@vitejs/plugin-vue": "~5.0.4",
+    "@vitejs/plugin-vue-jsx": "~3.1.0",
+    "@vue/tsconfig": "^0.5.1",
+    "core-js": "^3.37.1",
+    "cross-env": "~7.0.3",
+    "less": "~4.2.0",
+    "msw": "^2.3.0",
+    "nx": "^19.0.4",
+    "postcss": "~8.4.38",
+    "postcss-html": "~1.7.0",
+    "postcss-less": "~6.0.0",
+    "rimraf": "~5.0.7",
+    "stylelint": "~16.5.0",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-recommended": "~14.0.0",
+    "stylelint-config-recommended-vue": "~1.5.0",
+    "stylelint-config-standard": "~36.0.0",
+    "stylelint-order": "~6.0.4",
+    "stylelint-prettier": "^5.0.0",
+    "unocss": "^0.60.2",
+    "unplugin-vue-components": "~0.27.0",
+    "vite": "~5.2.11",
+    "vite-plugin-checker": "~0.6.4",
+    "vite-plugin-inspect": "^0.8.4",
+    "vite-plugin-mkcert": "^1.17.5",
+    "vite-plugin-svg-icons": "~2.0.1",
+    "vue-eslint-parser": "~9.4.2"
+  },
+  "pathMappings": {
+    "@/*": [
+      "src/*"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "mocks/user.ts",
+        "hash": "15111645868093772865"
+      },
+      {
+        "file": "src/enums/httpEnum.ts",
+        "hash": "16601516916628483165"
+      },
+      {
+        "file": "src/api/backend/api/systemRole.ts",
+        "hash": "6908990800387136077"
+      },
+      {
+        "file": "src/views/system/menu/formSchemas.tsx",
+        "hash": "8474256432696041153"
+      },
+      {
+        "file": "src/locales/lang/en/routes/basic.json",
+        "hash": "9998022387291622413"
+      },
+      {
+        "file": "src/layout/header/components/search/index.vue",
+        "hash": "3754508011585944427"
+      },
+      {
+        "file": "src/api/backend/api/toolsUpload.ts",
+        "hash": "12340666088047050542"
+      },
+      {
+        "file": "src/assets/icons/file-type-video.svg",
+        "hash": "8956760478072425782"
+      },
+      {
+        "file": "src/enums/cacheEnum.ts",
+        "hash": "12208179337694100389"
+      },
+      {
+        "file": "src/views/tool/storage/upload-modal.vue",
+        "hash": "16371422228092933811"
+      },
+      {
+        "file": "node_modules/.bin/nx-cloud.CMD",
+        "hash": "2830385023807593928"
+      },
+      {
+        "file": "src/components/basic/basic-arrow/index.ts",
+        "hash": "2179360978472828266"
+      },
+      {
+        "file": "src/hooks/event/useIntersectionObserver.ts",
+        "hash": "3397454940360988732"
+      },
+      {
+        "file": "src/components/core/schema-form/src/componentMap.ts",
+        "hash": "340219244914657969"
+      },
+      {
+        "file": "src/router/routes/modules/index.ts",
+        "hash": "1338383941583167787"
+      },
+      {
+        "file": "src/views/demos/nested-routes/route-three.vue",
+        "hash": "11334288862253195969"
+      },
+      {
+        "file": "node_modules/.bin/rimraf.CMD",
+        "hash": "139106238161581970"
+      },
+      {
+        "file": "src/views/demos/form/custom-form/index.vue",
+        "hash": "13408885398708661136"
+      },
+      {
+        "file": "src/hooks/event/useEventListener.ts",
+        "hash": "16184878575132987456"
+      },
+      {
+        "file": "src/assets/icons/file-type-zip.svg",
+        "hash": "15412735816287016504"
+      },
+      {
+        "file": "node_modules/.bin/lessc",
+        "hash": "9681223483011600665"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "15845841976087295631"
+      },
+      {
+        "file": "src/hooks/event/useBreakpoint.ts",
+        "hash": "1809952233327586216"
+      },
+      {
+        "file": "src/store/modules/keepAlive.ts",
+        "hash": "13853635417907088858"
+      },
+      {
+        "file": "src/views/demos/nested-routes/route-two.vue",
+        "hash": "17081210406543787712"
+      },
+      {
+        "file": "src/views/system/dept/columns.tsx",
+        "hash": "16774069787953913945"
+      },
+      {
+        "file": "src/views/account/about.vue",
+        "hash": "8347010460366972645"
+      },
+      {
+        "file": "src/components/basic/preview-resource/index.vue",
+        "hash": "3938477955958491618"
+      },
+      {
+        "file": "src/router/asyncModules/index.ts",
+        "hash": "7236274708744143933"
+      },
+      {
+        "file": "node_modules/.bin/msw",
+        "hash": "15719641814939853243"
+      },
+      {
+        "file": "src/components/basic/lockscreen/huawei-charge.vue",
+        "hash": "3182502351933345446"
+      },
+      {
+        "file": "src/components/basic/icon/src/icon-font.tsx",
+        "hash": "17699257361636598353"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/routes/dashboard.json",
+        "hash": "12810582384960554737"
+      },
+      {
+        "file": "src/components/basic/progress/index.vue",
+        "hash": "316259750179730183"
+      },
+      {
+        "file": "src/components/basic/check-box/index.vue",
+        "hash": "17429323863516827202"
+      },
+      {
+        "file": "src/components/basic/icon/src/IconPicker.vue",
+        "hash": "700198439660141908"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-settings/column-setting.vue",
+        "hash": "801845690808666895"
+      },
+      {
+        "file": "node_modules/.bin/xlsx.CMD",
+        "hash": "4415791052072258515"
+      },
+      {
+        "file": "src/utils/validate.ts",
+        "hash": "15298720417870899843"
+      },
+      {
+        "file": "src/plugins/antd.ts",
+        "hash": "8073017884252789541"
+      },
+      {
+        "file": "src/layout/header/components/setting/index.vue",
+        "hash": "17371974817679071524"
+      },
+      {
+        "file": "src/components/basic/tinymce/langs/index.ts",
+        "hash": "5971340995200381734"
+      },
+      {
+        "file": "src/views/system/user/AvatarUpload.vue",
+        "hash": "16186144788641185077"
+      },
+      {
+        "file": "src/layout/footer/index.module.less",
+        "hash": "5672936691596534616"
+      },
+      {
+        "file": "src/api/backend/api/systemServe.ts",
+        "hash": "18025365466542537138"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useExportData2Excel.ts",
+        "hash": "1944997503775046463"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/routes/demo.json",
+        "hash": "15283377369593341351"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-settings/index.vue",
+        "hash": "6641583251586708991"
+      },
+      {
+        "file": "src/components/basic/iframe-page/index.vue",
+        "hash": "6819630716030470558"
+      },
+      {
+        "file": "src/components/basic/basic-arrow/index.vue",
+        "hash": "12628413909265942064"
+      },
+      {
+        "file": "src/utils/request.ts",
+        "hash": "2920689720147529054"
+      },
+      {
+        "file": "src/utils/Storage.ts",
+        "hash": "13537752308954244858"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/routes/basic.json",
+        "hash": "6089714444253700497"
+      },
+      {
+        "file": "src/components/basic/locale-picker/index.ts",
+        "hash": "148239022074294812"
+      },
+      {
+        "file": "src/api/backend/api/authEmail.ts",
+        "hash": "12336703913016935474"
+      },
+      {
+        "file": "index.html",
+        "hash": "7945027588238210278"
+      },
+      {
+        "file": "src/api/demo/dict.ts",
+        "hash": "6770612696989908191"
+      },
+      {
+        "file": "src/layout/header/components/fullscreen/index.vue",
+        "hash": "16742228822708681294"
+      },
+      {
+        "file": "src/layout/menu/menu.vue",
+        "hash": "11383160196258849845"
+      },
+      {
+        "file": "src/components/basic/icon/src/props.ts",
+        "hash": "1631560283194453278"
+      },
+      {
+        "file": "src/utils/log.ts",
+        "hash": "10336837342512720461"
+      },
+      {
+        "file": "src/router/index.ts",
+        "hash": "16541254383556615912"
+      },
+      {
+        "file": "src/utils/urlUtils.ts",
+        "hash": "15550112891211068909"
+      },
+      {
+        "file": "src/components/core/schema-form/src/schema-form-item.vue",
+        "hash": "6631790135535960975"
+      },
+      {
+        "file": "src/views/system/dict-type/index.vue",
+        "hash": "13914467217712817693"
+      },
+      {
+        "file": "src/assets/icons/moon.svg",
+        "hash": "6718398491994340983"
+      },
+      {
+        "file": "src/components/basic/button/index.ts",
+        "hash": "9931257767521444851"
+      },
+      {
+        "file": "src/layout/logo/index.vue",
+        "hash": "10437892114373323260"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useTableExpand.ts",
+        "hash": "14404478559334035659"
+      },
+      {
+        "file": "package.json",
+        "hash": "9420035488511420134"
+      },
+      {
+        "file": "node_modules/.bin/lessc.CMD",
+        "hash": "11396625585495449688"
+      },
+      {
+        "file": "src/router/routes/modules/demos.ts",
+        "hash": "10292886839985722614"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/index.ts",
+        "hash": "16694413376951845863"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-settings/fullscreen.vue",
+        "hash": "6159268984771041924"
+      },
+      {
+        "file": "src/views/system/monitor/serve/index.vue",
+        "hash": "12060355618497533485"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useTable.tsx",
+        "hash": "6693685213071224096"
+      },
+      {
+        "file": "src/api/backend/api/toolsStorage.ts",
+        "hash": "10607693548553275744"
+      },
+      {
+        "file": "src/locales/useLocale.ts",
+        "hash": "13334356567896564916"
+      },
+      {
+        "file": "src/components/basic/tinymce/props.ts",
+        "hash": "4226232673329006739"
+      },
+      {
+        "file": "src/locales/lang/en/component.json",
+        "hash": "14981722089019840989"
+      },
+      {
+        "file": "src/components/core/schema-form/src/types/hooks.ts",
+        "hash": "14700576431518322520"
+      },
+      {
+        "file": "src/components/core/README.md",
+        "hash": "12660225736990323581"
+      },
+      {
+        "file": "src/router/routes/index.ts",
+        "hash": "4389299479369954708"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "9938696625487472594"
+      },
+      {
+        "file": "src/views/tool/storage/columns.tsx",
+        "hash": "1453312975224695059"
+      },
+      {
+        "file": "src/utils/propTypes.ts",
+        "hash": "13131625573844384126"
+      },
+      {
+        "file": "src/api/backend/api/systemParamConfig.ts",
+        "hash": "5591091605059798900"
+      },
+      {
+        "file": "node_modules/.bin/vite.ps1",
+        "hash": "1805466192908776615"
+      },
+      {
+        "file": "src/hooks/useSortable.ts",
+        "hash": "17279467828512467477"
+      },
+      {
+        "file": "src/components/basic/tinymce/index.vue",
+        "hash": "15218820837297623479"
+      },
+      {
+        "file": "src/api/backend/api/systemOnline.ts",
+        "hash": "17338658208217608090"
+      },
+      {
+        "file": "src/assets/icons/file-type-img.svg",
+        "hash": "2569856785836774436"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useColumns.ts",
+        "hash": "6740624381593488372"
+      },
+      {
+        "file": "src/enums/breakpointEnum.ts",
+        "hash": "10532240908648110764"
+      },
+      {
+        "file": "src/views/demos/nested-routes/route-one.vue",
+        "hash": "4341779152207954977"
+      },
+      {
+        "file": "src/store/modules/sse.ts",
+        "hash": "6986993656008480918"
+      },
+      {
+        "file": "types/index.d.ts",
+        "hash": "16535676138244456619"
+      },
+      {
+        "file": "src/components/core/schema-form/src/types/form.ts",
+        "hash": "5922029844709969155"
+      },
+      {
+        "file": "src/components/basic/icon/src/SvgIcon.vue",
+        "hash": "1425226803998804557"
+      },
+      {
+        "file": "node_modules/.bin/xlsx",
+        "hash": "6675621365032144287"
+      },
+      {
+        "file": "src/assets/icons/file-type-office.svg",
+        "hash": "11089204270308501609"
+      },
+      {
+        "file": "src/assets/404.gif",
+        "hash": "17689239852587161596"
+      },
+      {
+        "file": "mocks/demo/dict.ts",
+        "hash": "13479560422121881389"
+      },
+      {
+        "file": "types/shims/shims-vue.d.ts",
+        "hash": "1610007941223460963"
+      },
+      {
+        "file": ".nx/cache/run.json",
+        "hash": "7672644394443429562"
+      },
+      {
+        "file": "src/components/basic/excel/index.ts",
+        "hash": "7484393818467130730"
+      },
+      {
+        "file": "src/views/netdisk/components/overview-header-item.vue",
+        "hash": "16049852082461279876"
+      },
+      {
+        "file": "src/assets/icons/file-type-unknown.svg",
+        "hash": "1964732638944498172"
+      },
+      {
+        "file": "src/views/system/param-config/formSchemas.ts",
+        "hash": "5849288691498597828"
+      },
+      {
+        "file": "src/api/backend/api/systemDictItem.ts",
+        "hash": "6197783671723383752"
+      },
+      {
+        "file": "types/global.d.ts",
+        "hash": "5311944312340325978"
+      },
+      {
+        "file": "Dockerfile",
+        "hash": "8498914362835021031"
+      },
+      {
+        "file": "src/views/tool/email/index.vue",
+        "hash": "164105880994401802"
+      },
+      {
+        "file": "src/assets/icons/realDark.svg",
+        "hash": "3345031328603912783"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/types/tableAction.ts",
+        "hash": "12953242088153041008"
+      },
+      {
+        "file": "src/utils/index.ts",
+        "hash": "967022161957066129"
+      },
+      {
+        "file": "src/assets/icons/file-type-psd.svg",
+        "hash": "14332842714538830224"
+      },
+      {
+        "file": "mocks/demo/select.ts",
+        "hash": "6163158672796943938"
+      },
+      {
+        "file": "types/shims/shims-tsx.d.ts",
+        "hash": "15447727351711523804"
+      },
+      {
+        "file": "src/hooks/index.ts",
+        "hash": "10845453088957971414"
+      },
+      {
+        "file": "src/views/system/role/columns.tsx",
+        "hash": "11552812509671105905"
+      },
+      {
+        "file": "src/assets/icons/topmenu.svg",
+        "hash": "13859350025218495172"
+      },
+      {
+        "file": "src/layout/header/components/search/components/SearchFooter.vue",
+        "hash": "3981462968653163023"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/dynamic-table.config.ts",
+        "hash": "14321008707292181464"
+      },
+      {
+        "file": "src/views/demos/tables/lol-table/columns.tsx",
+        "hash": "1442890383952997035"
+      },
+      {
+        "file": "src/components/basic/title-i18n/index.ts",
+        "hash": "18189180311109437946"
+      },
+      {
+        "file": "src/views/demos/form/basic-form/index.vue",
+        "hash": "16075806445768818533"
+      },
+      {
+        "file": "src/store/modules/dict.ts",
+        "hash": "17862494578718517221"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useForm.tsx",
+        "hash": "15419646021871717474"
+      },
+      {
+        "file": "vite.config.ts",
+        "hash": "9423829791248346016"
+      },
+      {
+        "file": "src/components/core/schema-form/src/schema-form.ts",
+        "hash": "18427351918010454957"
+      },
+      {
+        "file": ".dockerignore",
+        "hash": "14793834702786546845"
+      },
+      {
+        "file": "src/views/demos/tables/lol-table/index.vue",
+        "hash": "14728202488941527649"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useLabelWidth.ts",
+        "hash": "750605606990474864"
+      },
+      {
+        "file": "src/views/system/param-config/columns.tsx",
+        "hash": "5783344847009202973"
+      },
+      {
+        "file": "src/components/core/schema-form/src/types/index.ts",
+        "hash": "11588666963541742883"
+      },
+      {
+        "file": "src/components/basic/lockscreen/index.vue",
+        "hash": "18230475795092765382"
+      },
+      {
+        "file": "src/store/modules/tabsView.ts",
+        "hash": "800906465103730519"
+      },
+      {
+        "file": "src/views/demos/tables/edit-row-table/columns.tsx",
+        "hash": "4501756428756340031"
+      },
+      {
+        "file": "src/locales/helper.ts",
+        "hash": "14563401000855230944"
+      },
+      {
+        "file": "node_modules/.bin/xlsx.ps1",
+        "hash": "14375806626029752073"
+      },
+      {
+        "file": "node_modules/.bin/cross-env.CMD",
+        "hash": "18245545355081511759"
+      },
+      {
+        "file": "src/utils/performanceMonitor.ts",
+        "hash": "6813651138876282903"
+      },
+      {
+        "file": "unocss.config.ts",
+        "hash": "12381400765278867745"
+      },
+      {
+        "file": "src/views/demos/tables/wzry-table/columns.tsx",
+        "hash": "11518018233883330499"
+      },
+      {
+        "file": "src/views/demos/form/request-form/form-schema.ts",
+        "hash": "3549305215553620731"
+      },
+      {
+        "file": "src/components/core/schema-form/src/helper.ts",
+        "hash": "2074930281734485921"
+      },
+      {
+        "file": "openapi.config.ts",
+        "hash": "3349574197516481547"
+      },
+      {
+        "file": "src/assets/icons/sun.svg",
+        "hash": "14071255632814625496"
+      },
+      {
+        "file": "src/components/core/schema-form/src/schema-form-item.ts",
+        "hash": "2987543864539176258"
+      },
+      {
+        "file": "src/assets/icons/file-type-ppt.svg",
+        "hash": "12718276797358736668"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useAdvanced.ts",
+        "hash": "8665718948950769644"
+      },
+      {
+        "file": "public/iconfont.js",
+        "hash": "9146896992028184095"
+      },
+      {
+        "file": "src/api/backend/api/account.ts",
+        "hash": "183489945453798363"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useEditable.ts",
+        "hash": "8108128847173240063"
+      },
+      {
+        "file": "src/locales/lang/en/routes/account.json",
+        "hash": "7714246990581148269"
+      },
+      {
+        "file": "src/router/routes/basic.ts",
+        "hash": "10737950009673296688"
+      },
+      {
+        "file": ".env",
+        "hash": "14246887360698210635"
+      },
+      {
+        "file": "src/utils/awaitTo.ts",
+        "hash": "3151722857740921553"
+      },
+      {
+        "file": "src/views/system/dict-item/index.vue",
+        "hash": "4676557577128397959"
+      },
+      {
+        "file": "README.md",
+        "hash": "1700757811398962340"
+      },
+      {
+        "file": "src/utils/dateUtil.ts",
+        "hash": "16676581355892756146"
+      },
+      {
+        "file": "src/views/system/user/DeptTree.vue",
+        "hash": "3180750895280803529"
+      },
+      {
+        "file": "src/api/backend/api/systemSse.ts",
+        "hash": "9499678198459563729"
+      },
+      {
+        "file": "src/components/basic/excel/src/ExportExcelModal.tsx",
+        "hash": "4058538760277474035"
+      },
+      {
+        "file": "src/views/demos/form/dynamic-form/index.vue",
+        "hash": "3880008536271032342"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/layout.json",
+        "hash": "17001391125375026060"
+      },
+      {
+        "file": "types/env.d.ts",
+        "hash": "4759091683533726539"
+      },
+      {
+        "file": "node_modules/.bin/nx-cloud",
+        "hash": "9966549076822935755"
+      },
+      {
+        "file": "src/layout/tabs/tabs-view.vue",
+        "hash": "17372505311993500000"
+      },
+      {
+        "file": "src/views/system/role/index.vue",
+        "hash": "10664584773512278892"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/index.ts",
+        "hash": "17451743251278194724"
+      },
+      {
+        "file": "src/utils/downloadFile.ts",
+        "hash": "8196476746909145974"
+      },
+      {
+        "file": "src/router/routes/modules/externa-link.ts",
+        "hash": "10819434167398010321"
+      },
+      {
+        "file": "src/api/backend/api/index.ts",
+        "hash": "17598236655017181732"
+      },
+      {
+        "file": "mocks/list.ts",
+        "hash": "14583822287853682108"
+      },
+      {
+        "file": "src/components/basic/button/button.vue",
+        "hash": "5883661224188104586"
+      },
+      {
+        "file": "src/locales/index.ts",
+        "hash": "2364812924158645591"
+      },
+      {
+        "file": "src/hooks/useModal/useModal.tsx",
+        "hash": "12205187383844109572"
+      },
+      {
+        "file": "src/components/core/draggable-modal/index.ts",
+        "hash": "2278357975097320063"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useTableContext.ts",
+        "hash": "760542664998228807"
+      },
+      {
+        "file": "src/views/netdisk/formSchemas.ts",
+        "hash": "12210310347246672272"
+      },
+      {
+        "file": "node_modules/.bin/cross-env",
+        "hash": "13846224946227089169"
+      },
+      {
+        "file": "src/hooks/useTime.ts",
+        "hash": "6099384675759418700"
+      },
+      {
+        "file": "src/api/backend/api/captcha.ts",
+        "hash": "3584715075116894947"
+      },
+      {
+        "file": ".env.development",
+        "hash": "1978583960065808793"
+      },
+      {
+        "file": "src/views/demos/tables/wzry-table/index.vue",
+        "hash": "12555173953594292285"
+      },
+      {
+        "file": "src/layout/menu/components/menu-item.vue",
+        "hash": "12843602172538913621"
+      },
+      {
+        "file": ".browserslistrc",
+        "hash": "15794842677175685572"
+      },
+      {
+        "file": "src/components/basic/excel/src/typing.ts",
+        "hash": "5695680637374578103"
+      },
+      {
+        "file": "src/components/core/schema-form/src/components/ApiSelect.vue",
+        "hash": "8787732546257930677"
+      },
+      {
+        "file": "src/hooks/useDomWidth.ts",
+        "hash": "12987377311875482162"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/common.json",
+        "hash": "15510905520843605899"
+      },
+      {
+        "file": "node_modules/.bin/cross-env-shell",
+        "hash": "15996184030351200300"
+      },
+      {
+        "file": "node_modules/.bin/rimraf",
+        "hash": "3848138265333224324"
+      },
+      {
+        "file": "src/store/modules/locale.ts",
+        "hash": "2325392591684226397"
+      },
+      {
+        "file": "src/views/system/user/columns.tsx",
+        "hash": "6889272110315703854"
+      },
+      {
+        "file": "src/views/system/role/formSchemas.ts",
+        "hash": "8807714284965041377"
+      },
+      {
+        "file": "src/utils/is.ts",
+        "hash": "15035252547038756449"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-settings/refresh-setting.vue",
+        "hash": "10639781107621274421"
+      },
+      {
+        "file": "src/components/basic/context-menu/src/typing.ts",
+        "hash": "10789320722150158835"
+      },
+      {
+        "file": "src/views/error/404.vue",
+        "hash": "10558548044888366758"
+      },
+      {
+        "file": "src/views/demos/custom-modal.vue",
+        "hash": "5080400747073418888"
+      },
+      {
+        "file": "src/locales/lang/en/layout.json",
+        "hash": "13443943461023743902"
+      },
+      {
+        "file": "src/components/basic/tinymce/index.ts",
+        "hash": "7743977853487947419"
+      },
+      {
+        "file": "src/assets/images/no-preview.png",
+        "hash": "3922220405873777097"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/tool-bar/index.vue",
+        "hash": "10829624569418130205"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useTableState.ts",
+        "hash": "9071128633583871462"
+      },
+      {
+        "file": "src/utils/Export2Excel.ts",
+        "hash": "440517352856483280"
+      },
+      {
+        "file": "src/api/demo/hero.ts",
+        "hash": "10459848646660725571"
+      },
+      {
+        "file": "src/App.vue",
+        "hash": "11084984912990006099"
+      },
+      {
+        "file": "src/views/system/monitor/online/index.vue",
+        "hash": "11822345865538367789"
+      },
+      {
+        "file": "src/views/system/user/index.vue",
+        "hash": "15801775983986474626"
+      },
+      {
+        "file": "node_modules/.bin/nx.ps1",
+        "hash": "12601750303562423058"
+      },
+      {
+        "file": "src/router/helper/routeHelper.tsx",
+        "hash": "1189532650521702186"
+      },
+      {
+        "file": "types/shims/shims-app.d.ts",
+        "hash": "13414618985313792"
+      },
+      {
+        "file": "mocks/index.ts",
+        "hash": "8721722138420567764"
+      },
+      {
+        "file": "src/views/error/comp-not-found.vue",
+        "hash": "5193342853998351553"
+      },
+      {
+        "file": "src/components/basic/README.md",
+        "hash": "13352422833849860799"
+      },
+      {
+        "file": "src/components/core/schema-form/src/types/component.ts",
+        "hash": "14901141711304715145"
+      },
+      {
+        "file": "src/api/index.ts",
+        "hash": "10155168022254645310"
+      },
+      {
+        "file": "src/locales/config.ts",
+        "hash": "13054317066471894225"
+      },
+      {
+        "file": "types/vue-router.d.ts",
+        "hash": "15048530275333231857"
+      },
+      {
+        "file": "src/hooks/functions/useContextMenu.ts",
+        "hash": "8868051165492545739"
+      },
+      {
+        "file": "src/styles/theme.less",
+        "hash": "9162277602960221617"
+      },
+      {
+        "file": "src/components/basic/lockscreen/xiaomi-charge.vue",
+        "hash": "161022614419384075"
+      },
+      {
+        "file": "src/locales/lang/en/common.json",
+        "hash": "9731293738749495501"
+      },
+      {
+        "file": ".env.production",
+        "hash": "17610084223170356709"
+      },
+      {
+        "file": "types/utils.d.ts",
+        "hash": "16838106131581515351"
+      },
+      {
+        "file": "src/views/demos/form/rule-form/index.vue",
+        "hash": "8970275025228375463"
+      },
+      {
+        "file": "src/views/demos/form/use-form/index.vue",
+        "hash": "955952620218828004"
+      },
+      {
+        "file": "src/locales/lang/en/routes/dashboard.json",
+        "hash": "18436361462102638635"
+      },
+      {
+        "file": "src/api/backend/api/systemMenu.ts",
+        "hash": "7247610196638936321"
+      },
+      {
+        "file": "src/hooks/useBattery.ts",
+        "hash": "17274439641920851653"
+      },
+      {
+        "file": "nx.json",
+        "hash": "11812459413926544088"
+      },
+      {
+        "file": "src/components/core/schema-form/src/components/index.ts",
+        "hash": "15675231191077577284"
+      },
+      {
+        "file": "src/hooks/useModal/useFormModal.tsx",
+        "hash": "16157956993640374085"
+      },
+      {
+        "file": "src/views/system/menu/columns.tsx",
+        "hash": "15612700319997436265"
+      },
+      {
+        "file": "src/assets/icons/file-type-pdf.svg",
+        "hash": "3853168524128840499"
+      },
+      {
+        "file": "tsconfig.node.json",
+        "hash": "4208030242441905014"
+      },
+      {
+        "file": "node_modules/.bin/nx.CMD",
+        "hash": "3523126155447397968"
+      },
+      {
+        "file": "src/components/basic/context-menu/index.ts",
+        "hash": "9721935807317546383"
+      },
+      {
+        "file": "src/views/netdisk/overview.vue",
+        "hash": "8664432240988986257"
+      },
+      {
+        "file": "src/store/index.ts",
+        "hash": "16241756086152595980"
+      },
+      {
+        "file": "src/layout/tabs/index.ts",
+        "hash": "11049320045494391309"
+      },
+      {
+        "file": "node_modules/.bin/cross-env-shell.ps1",
+        "hash": "2605263745005901590"
+      },
+      {
+        "file": ".stylelintignore",
+        "hash": "14247666609725959869"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/types/index.ts",
+        "hash": "11555544166317354905"
+      },
+      {
+        "file": "node_modules/.bin/cross-env.ps1",
+        "hash": "11306679925825850755"
+      },
+      {
+        "file": "src/plugins/globalMethods.ts",
+        "hash": "17853416388224798460"
+      },
+      {
+        "file": "src/styles/index.less",
+        "hash": "7455941672216655793"
+      },
+      {
+        "file": "src/hooks/useI18n.ts",
+        "hash": "4846952573220703348"
+      },
+      {
+        "file": "src/components/basic/excel/src/Export2Excel.ts",
+        "hash": "5808347557815293807"
+      },
+      {
+        "file": "src/store/modules/user.ts",
+        "hash": "434263299244508822"
+      },
+      {
+        "file": "src/components/basic/button/button.ts",
+        "hash": "4053138519389719152"
+      },
+      {
+        "file": "src/components/basic/context-menu/src/createContextMenu.ts",
+        "hash": "11979156139986327630"
+      },
+      {
+        "file": "src/components/basic/basic-help/index.vue",
+        "hash": "6537016344915690676"
+      },
+      {
+        "file": "src/views/demos/form/basic-form/form-schema.tsx",
+        "hash": "15137227601481558169"
+      },
+      {
+        "file": "src/hooks/useOnline.ts",
+        "hash": "9120478841817233655"
+      },
+      {
+        "file": "src/components/basic/title-i18n/index.vue",
+        "hash": "2500420069510733415"
+      },
+      {
+        "file": "types/polyfill.d.ts",
+        "hash": "13307265336016762571"
+      },
+      {
+        "file": "node_modules/.bin/nx",
+        "hash": "15859879808835690491"
+      },
+      {
+        "file": "node_modules/.bin/vite.CMD",
+        "hash": "423531039466293953"
+      },
+      {
+        "file": "src/components/basic/iframe-page/index.ts",
+        "hash": "16246496851696889487"
+      },
+      {
+        "file": "src/store/modules/layoutSetting.ts",
+        "hash": "17564545738787518677"
+      },
+      {
+        "file": "src/components/basic/locale-picker/index.vue",
+        "hash": "2535621641108543258"
+      },
+      {
+        "file": "src/styles/transition.less",
+        "hash": "15869477783671822426"
+      },
+      {
+        "file": "src/api/demo/select.ts",
+        "hash": "17643457321756735423"
+      },
+      {
+        "file": "src/components/core/schema-form/src/components/form-action.vue",
+        "hash": "15346974547673364060"
+      },
+      {
+        "file": "src/api/backend/api/netDiskOverview.ts",
+        "hash": "7430403220181136549"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/types/table.ts",
+        "hash": "3401571770293683866"
+      },
+      {
+        "file": "src/hooks/event/useWindowSizeFn.ts",
+        "hash": "617832735496273824"
+      },
+      {
+        "file": "src/router/routes/modules/dashboard.ts",
+        "hash": "14250180038626354409"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "255457509601276286"
+      },
+      {
+        "file": "src/views/system/dict-item/columns.tsx",
+        "hash": "2937661170553212031"
+      },
+      {
+        "file": "src/views/system/schedule/task/formSchemas.ts",
+        "hash": "4784857696376874597"
+      },
+      {
+        "file": "src/components/basic/split-panel/index.vue",
+        "hash": "3184209052895968992"
+      },
+      {
+        "file": "src/styles/antdv.override.less",
+        "hash": "6527550245986498332"
+      },
+      {
+        "file": "src/permission/permCode.ts",
+        "hash": "7684875945284854996"
+      },
+      {
+        "file": "src/components/basic/lockscreen/index.ts",
+        "hash": "2832968670621839674"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useFormState.ts",
+        "hash": "4634329131829347960"
+      },
+      {
+        "file": "src/assets/images/logo.png",
+        "hash": "15083180187844382064"
+      },
+      {
+        "file": "src/api/backend/api/health.ts",
+        "hash": "16109565427250405478"
+      },
+      {
+        "file": "src/store/modules/lockscreen.ts",
+        "hash": "5815478325825890324"
+      },
+      {
+        "file": "src/views/system/dict-type/formSchemas.ts",
+        "hash": "10331074204994350386"
+      },
+      {
+        "file": "src/views/demos/tables/search-table/index.vue",
+        "hash": "18283528346685308490"
+      },
+      {
+        "file": "src/views/tool/email/formSchemas.tsx",
+        "hash": "8590670436457371685"
+      },
+      {
+        "file": "node_modules/.bin/stylelint.ps1",
+        "hash": "5791192382517436606"
+      },
+      {
+        "file": "src/assets/icons/light.svg",
+        "hash": "251628737965648149"
+      },
+      {
+        "file": "src/locales/lang/en/routes/demo.json",
+        "hash": "17932261181893085106"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "8907160717591056847"
+      },
+      {
+        "file": "src/components/basic/icon/src/icons.data.ts",
+        "hash": "5452441927520043435"
+      },
+      {
+        "file": "src/router/router-guards.ts",
+        "hash": "1817903788654091438"
+      },
+      {
+        "file": "node_modules/.bin/stylelint.CMD",
+        "hash": "6557086738112063210"
+      },
+      {
+        "file": "src/utils/common.ts",
+        "hash": "2497619904127343713"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/dynamic-table.vue",
+        "hash": "9425665542861243064"
+      },
+      {
+        "file": "src/layout/tabs/tabs-operator.vue",
+        "hash": "1331014216804448572"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/routes/account.json",
+        "hash": "4041966555051186453"
+      },
+      {
+        "file": "mocks/demo/hero/_lolHeroList.json",
+        "hash": "2276334993820688210"
+      },
+      {
+        "file": "node_modules/.bin/rimraf.ps1",
+        "hash": "14366256211459642867"
+      },
+      {
+        "file": "src/components/basic/lockscreen/lockscreen-page.vue",
+        "hash": "13431871667118220488"
+      },
+      {
+        "file": "src/components/basic/icon/index.ts",
+        "hash": "10025785897206154155"
+      },
+      {
+        "file": "src/layout/footer/index.tsx",
+        "hash": "17323070789710355478"
+      },
+      {
+        "file": "src/utils/browser-type.ts",
+        "hash": "13164675953518498160"
+      },
+      {
+        "file": "public/favicon.ico",
+        "hash": "18282137866655320110"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "12301379560934385264"
+      },
+      {
+        "file": "src/views/demos/tables/lol-table/heroInfo.vue",
+        "hash": "15786688327863008752"
+      },
+      {
+        "file": "src/views/demos/button.vue",
+        "hash": "14524100110066615285"
+      },
+      {
+        "file": "src/layout/menu/components/sub-menu-item.vue",
+        "hash": "2990716752842445202"
+      },
+      {
+        "file": "mocks/_util.ts",
+        "hash": "1538651941129695026"
+      },
+      {
+        "file": "src/assets/icons/logo.svg",
+        "hash": "15729183995506641469"
+      },
+      {
+        "file": "src/components/business/README.md",
+        "hash": "16067402432739627109"
+      },
+      {
+        "file": "src/assets/icons/file-type-excel.svg",
+        "hash": "7685088888727425189"
+      },
+      {
+        "file": "src/components/basic/icon/Icon.vue",
+        "hash": "10161359692487728542"
+      },
+      {
+        "file": "node_modules/.bin/msw.CMD",
+        "hash": "4656173728316614489"
+      },
+      {
+        "file": "src/components/basic/context-menu/src/ContextMenu.vue",
+        "hash": "8176114595567340118"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useTableMethods.ts",
+        "hash": "5350372413624240635"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "12525469641330694829"
+      },
+      {
+        "file": "src/locales/lang/en.ts",
+        "hash": "11774696047429459770"
+      },
+      {
+        "file": "src/layout/header/index.vue",
+        "hash": "136342302569948860"
+      },
+      {
+        "file": "types/modules.d.ts",
+        "hash": "6287947508812273497"
+      },
+      {
+        "file": "src/locales/lang/zh-CN/component.json",
+        "hash": "10471039019787960467"
+      },
+      {
+        "file": "src/assets/icons/file-type-code.svg",
+        "hash": "2820773714101548072"
+      },
+      {
+        "file": "src/views/netdisk/columns.tsx",
+        "hash": "9836708001707085715"
+      },
+      {
+        "file": "src/assets/login.svg",
+        "hash": "13518694261182410831"
+      },
+      {
+        "file": "src/assets/icons/file-type-txt.svg",
+        "hash": "7529462327266563584"
+      },
+      {
+        "file": "src/views/login/index.vue",
+        "hash": "7906178503536604974"
+      },
+      {
+        "file": "src/layout/header/components/breadcrumb/index.vue",
+        "hash": "5107721705161844105"
+      },
+      {
+        "file": "src/enums/roleEnum.ts",
+        "hash": "13172777880303477007"
+      },
+      {
+        "file": "src/views/system/dept/index.vue",
+        "hash": "17125966029342300169"
+      },
+      {
+        "file": "src/views/demos/form/dynamic-form/form-schema.ts",
+        "hash": "15580602152134711997"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-settings/size-setting.vue",
+        "hash": "15358158851965753791"
+      },
+      {
+        "file": "src/views/system/schedule/log/index.vue",
+        "hash": "593936808779420351"
+      },
+      {
+        "file": "node_modules/.bin/vite",
+        "hash": "8094277358314126530"
+      },
+      {
+        "file": "src/views/system/monitor/online/columns.tsx",
+        "hash": "5026514619444027943"
+      },
+      {
+        "file": "src/hooks/useModal/index.ts",
+        "hash": "17101032930123875620"
+      },
+      {
+        "file": "src/views/system/user/formSchemas.tsx",
+        "hash": "2177713429675911780"
+      },
+      {
+        "file": "src/hooks/useModal/modal.tsx",
+        "hash": "18138461994952175860"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/dynamic-table.ts",
+        "hash": "5335500832125409946"
+      },
+      {
+        "file": "src/assets/icons/dark.svg",
+        "hash": "15537723998756858639"
+      },
+      {
+        "file": "src/views/netdisk/components/file-operate-button-list.vue",
+        "hash": "15023794271354184901"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/types/column.ts",
+        "hash": "9430818848006546321"
+      },
+      {
+        "file": "src/utils/helper/tsxHelper.tsx",
+        "hash": "11613084709779195973"
+      },
+      {
+        "file": "node_modules/.bin/lessc.ps1",
+        "hash": "6890328804639889731"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/index.ts",
+        "hash": "6864503201217667597"
+      },
+      {
+        "file": "src/styles/common.less",
+        "hash": "2545960333852134313"
+      },
+      {
+        "file": "src/layout/header/components/search/components/SearchResult.vue",
+        "hash": "2327989484468411696"
+      },
+      {
+        "file": "mocks/demo/hero/index.ts",
+        "hash": "15402437817513265136"
+      },
+      {
+        "file": "src/layout/index.vue",
+        "hash": "16778211775275849374"
+      },
+      {
+        "file": "src/views/system/dept/formSchemas.ts",
+        "hash": "13689270191080566446"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useScroll.ts",
+        "hash": "13266588309541378635"
+      },
+      {
+        "file": "src/hooks/event/useScroll.ts",
+        "hash": "4550220006627358925"
+      },
+      {
+        "file": "node_modules/.bin/cross-env-shell.CMD",
+        "hash": "3754783406387002026"
+      },
+      {
+        "file": "src/api/backend/api/systemEmail.ts",
+        "hash": "14359619317389538677"
+      },
+      {
+        "file": "src/assets/icons/sidemenu.svg",
+        "hash": "15537723998756858639"
+      },
+      {
+        "file": "src/assets/icons/locale.svg",
+        "hash": "14625183438826405422"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useFormContext.ts",
+        "hash": "5618064750730636321"
+      },
+      {
+        "file": "src/hooks/useEventbus.ts",
+        "hash": "12970456838537771691"
+      },
+      {
+        "file": "src/components/basic/tinymce/constants.ts",
+        "hash": "1660699532078097959"
+      },
+      {
+        "file": "mocks/demo/hero/_heroList.json",
+        "hash": "4974177761189976294"
+      },
+      {
+        "file": "src/views/system/menu/index.vue",
+        "hash": "13866110299880234096"
+      },
+      {
+        "file": "src/views/system/schedule/task/columns.tsx",
+        "hash": "7147574518784794052"
+      },
+      {
+        "file": "src/views/netdisk/manage.vue",
+        "hash": "14110653889372920565"
+      },
+      {
+        "file": "src/plugins/assets.ts",
+        "hash": "312011950628049655"
+      },
+      {
+        "file": "src/views/system/dict-item/formSchemas.ts",
+        "hash": "11530318663511870707"
+      },
+      {
+        "file": "src/views/netdisk/components/file-upload-drawer.vue",
+        "hash": "5142035528155076425"
+      },
+      {
+        "file": "src/components/basic/tinymce/plugins.ts",
+        "hash": "5269330325227150517"
+      },
+      {
+        "file": "src/api/backend/api/typings.d.ts",
+        "hash": "9830487208375952038"
+      },
+      {
+        "file": "src/layout/header/components/setting/constant.ts",
+        "hash": "6347233485377853872"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/hooks/useTableForm.ts",
+        "hash": "5539219320438270241"
+      },
+      {
+        "file": "src/layout/menu/components/menu-item-content.vue",
+        "hash": "6178044563844695647"
+      },
+      {
+        "file": "src/styles/variables.less",
+        "hash": "2349815023454827358"
+      },
+      {
+        "file": "src/assets/analysis.svg",
+        "hash": "13538345637156473293"
+      },
+      {
+        "file": "src/views/system/param-config/index.vue",
+        "hash": "13952621802444165168"
+      },
+      {
+        "file": "src/assets/icons/file-type-docx.svg",
+        "hash": "8167893106243374090"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useFormEvents.ts",
+        "hash": "7113108071727618992"
+      },
+      {
+        "file": "src/views/demos/tables/search-table/columns.tsx",
+        "hash": "14598561810701117408"
+      },
+      {
+        "file": "src/plugins/index.ts",
+        "hash": "1150601570323607761"
+      },
+      {
+        "file": "src/assets/icons/login.svg",
+        "hash": "13518694261182410831"
+      },
+      {
+        "file": "src/views/demos/nested-routes/index.vue",
+        "hash": "13975439756165614737"
+      },
+      {
+        "file": "src/views/demos/form/custom-form/input-number-range.vue",
+        "hash": "7393975119258829257"
+      },
+      {
+        "file": "src/views/system/monitor/log/login/index.vue",
+        "hash": "151120356652455607"
+      },
+      {
+        "file": "src/api/backend/api/systemTask.ts",
+        "hash": "6490496682105355852"
+      },
+      {
+        "file": "src/views/demos/form/use-form/form-schema.ts",
+        "hash": "13594970258711043348"
+      },
+      {
+        "file": "src/styles/reset.css",
+        "hash": "49666562942639501"
+      },
+      {
+        "file": ".nx/cache/nx_files.nxt",
+        "hash": "9067359122589425896"
+      },
+      {
+        "file": "src/locales/lang/zh_CN.ts",
+        "hash": "11388893596424031665"
+      },
+      {
+        "file": "src/views/netdisk/components/file-preview-drawer.vue",
+        "hash": "9101399522782413949"
+      },
+      {
+        "file": "src/components/basic/pro-config-provider/index.vue",
+        "hash": "59028278875914369"
+      },
+      {
+        "file": "src/components/basic/tinymce/langs/zh_CN.js",
+        "hash": "8225127391264466422"
+      },
+      {
+        "file": "src/components/core/schema-form/index.ts",
+        "hash": "4779825752136442017"
+      },
+      {
+        "file": "src/router/routes/modules/account.ts",
+        "hash": "12456440322324841587"
+      },
+      {
+        "file": "src/assets/icons/file-type-music.svg",
+        "hash": "14789182848446818607"
+      },
+      {
+        "file": "src/api/backend/api/systemDept.ts",
+        "hash": "2122499482473397621"
+      },
+      {
+        "file": "src/views/demos/form/rule-form/form-schema.ts",
+        "hash": "8737574561298074697"
+      },
+      {
+        "file": "src/api/backend/api/auth.ts",
+        "hash": "3743129270170863957"
+      },
+      {
+        "file": "src/views/demos/form/request-form/index.vue",
+        "hash": "1343201335472590713"
+      },
+      {
+        "file": "stylelint.config.mjs",
+        "hash": "8302287790499768439"
+      },
+      {
+        "file": "src/api/backend/api/systemLog.ts",
+        "hash": "15753264275046483688"
+      },
+      {
+        "file": "src/api/backend/api/businessTodo.ts",
+        "hash": "55118610520802325"
+      },
+      {
+        "file": "src/components/basic/split-panel/index.ts",
+        "hash": "7813585082704153839"
+      },
+      {
+        "file": "src/views/demos/tables/edit-row-table/index.vue",
+        "hash": "7556884517859231469"
+      },
+      {
+        "file": "node_modules/.bin/nx-cloud.ps1",
+        "hash": "7136808533515704607"
+      },
+      {
+        "file": "src/assets/images/tool.png",
+        "hash": "977311917049255874"
+      },
+      {
+        "file": "src/views/system/schedule/task/index.vue",
+        "hash": "16465793561679857129"
+      },
+      {
+        "file": "src/permission/index.ts",
+        "hash": "8448429467056092571"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-action.vue",
+        "hash": "8460682560196029373"
+      },
+      {
+        "file": "src/api/backend/api/netDiskManage.ts",
+        "hash": "6276507055033536154"
+      },
+      {
+        "file": "src/router/constant.ts",
+        "hash": "7237396321292997388"
+      },
+      {
+        "file": "src/components/core/draggable-modal/index.vue",
+        "hash": "11382710080375272272"
+      },
+      {
+        "file": "src/components/core/dynamic-table/index.ts",
+        "hash": "7520598045109276041"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/editable-cell/index.vue",
+        "hash": "2418875343441003553"
+      },
+      {
+        "file": "src/api/backend/api/systemUser.ts",
+        "hash": "4802698225092907405"
+      },
+      {
+        "file": "src/constants/env.ts",
+        "hash": "9309047629326553299"
+      },
+      {
+        "file": "src/components/core/schema-form/src/schema-form.vue",
+        "hash": "7536449414168476814"
+      },
+      {
+        "file": "src/polyfill.ts",
+        "hash": "10573375123322266177"
+      },
+      {
+        "file": "src/views/tool/storage/index.vue",
+        "hash": "8727519007656149327"
+      },
+      {
+        "file": "src/hooks/useModal/types.ts",
+        "hash": "1651152903138527160"
+      },
+      {
+        "file": "src/api/backend/api/systemDictType.ts",
+        "hash": "14916229646678661076"
+      },
+      {
+        "file": "src/router/routes/outsideLayout.ts",
+        "hash": "7415693860930464994"
+      },
+      {
+        "file": "src/assets/icons/file-type-dir.svg",
+        "hash": "5733810387947909784"
+      },
+      {
+        "file": "node_modules/.bin/msw.ps1",
+        "hash": "13584338820452701134"
+      },
+      {
+        "file": "src/api/typings.d.ts",
+        "hash": "14656764948170495607"
+      },
+      {
+        "file": "src/components/core/schema-form/src/hooks/useFormMethods.ts",
+        "hash": "2822093777994242512"
+      },
+      {
+        "file": "node_modules/.bin/stylelint",
+        "hash": "16461032933688057381"
+      },
+      {
+        "file": "src/components/basic/excel/src/ImportExcel.vue",
+        "hash": "18002453138906265442"
+      },
+      {
+        "file": "src/layout/header/components/index.ts",
+        "hash": "6227900519762002649"
+      },
+      {
+        "file": "src/hooks/event/useScrollTo.ts",
+        "hash": "7236425488923493258"
+      },
+      {
+        "file": "src/views/system/dict-type/columns.tsx",
+        "hash": "9924659893554566828"
+      },
+      {
+        "file": "src/views/account/settings.vue",
+        "hash": "9269872199197086345"
+      },
+      {
+        "file": "src/components/core/dynamic-table/src/components/table-settings/search-setting.vue",
+        "hash": "6812858620010250161"
+      },
+      {
+        "file": "src/views/dashboard/welcome/index.vue",
+        "hash": "8819051856058355050"
+      }
+    ],
+    "projectFileMap": {}
+  }
+} 
