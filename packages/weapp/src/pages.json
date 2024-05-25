@@ -1,0 +1,53 @@
+{
+  "pages": [
+    {
+      "path": "pages/home/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pagesA/car/index",
+      "style": {
+        "navigationBarTitleText": "联系车主"
+      }
+    }
+  ],
+  "preloadRule": {
+    "pages/home/index": {
+      "network": "all",
+      "packages": ["pagesA"]
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "June",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+  // "tabBar": {
+  //   "backgroundColor": "#FFFFFF",
+  //   "selectedColor": "#165AFC",
+  //   "borderStyle": "white",
+  //   "list": [
+  //     {
+  //       "text": "首页",
+  //       "pagePath": "pages/home/index",
+  //       "iconPath": "static/logo.png",
+  //       "selectedIconPath": "static/logo.png"
+  //     },
+  //     {
+  //       "text": "我的",
+  //       "pagePath": "pages/mine/index",
+  //       "iconPath": "static/logo.png",
+  //       "selectedIconPath": "static/logo.png"
+  //     }
+  //   ]
+  // },
+  // "easycom": {
+  //   "autoscan": true,
+  //   "custom": {
+  //     "^wd-(.*)": "wot-design-uni/components/wd-$1/wd-$1.vue"
+  //   }
+  // }
+}

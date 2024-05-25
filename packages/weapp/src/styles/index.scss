@@ -1,0 +1,27 @@
+:root,
+page {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC',
+    'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei',
+    sans-serif;
+  font-size: 28rpx;
+  color: #333;
+  --primary-color: #6190e8;
+  --cancel-color: #c8c7cc;
+  --danger-color: #f16863;
+  --warning-color: #f0ad4e;
+  --success-color: #34db50;
+  --grey-color: #7f7f7f;
+}
+page,
+body {
+  background-color: #f8f8f8;
+}
+
+.container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  border-top: 1rpx solid #f2f2f2;
+}
