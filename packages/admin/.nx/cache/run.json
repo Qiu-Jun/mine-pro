@@ -1,9 +1,0 @@
-{
-  "run": {
-    "command": "nx run-many -t build --exclude @minepro/components",
-    "startTime": "2024-05-25T09:24:23.163Z",
-    "endTime": "2024-05-25T09:24:23.167Z",
-    "inner": false
-  },
-  "tasks": []
-}
