@@ -5,12 +5,26 @@
       "style": {
         "navigationBarTitleText": "首页"
       }
-    },
+    }
+  ],
+  "subPackages": [
     {
-      "path": "pagesA/car/index",
-      "style": {
-        "navigationBarTitleText": "联系车主"
-      }
+      "root": "pagesA",
+      "pages": [
+        {
+          "path": "horoscope/index",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": true
+          }
+        },
+        {
+          "path": "car/index",
+          "style": {
+            "navigationBarTitleText": "联系车主"
+          }
+        }
+      ]
     }
   ],
   "preloadRule": {

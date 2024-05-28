@@ -2,17 +2,18 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-05-24 13:46:22
- * @LastEditTime: 2024-05-24 13:55:05
+ * @LastEditTime: 2024-05-28 13:52:32
  * @LastEditors: June
- * @FilePath: \mine_weapp\src\pagesA\car\index.vue
+ * @FilePath: \mine-pro\packages\weapp\src\pagesA\car\index.vue
 -->
 <template>
   <view class="container f-center flex-col">
     <view class="text-center">车主信息</view>
-    <view>车牌号: {{ carCode }}</view>
+    <view class="my-20rpx">车牌号: {{ carCode }}</view>
+
     <view
       v-if="phone"
-      class="w-120rpx h-48rpx bg-[var(--primary-color)] text-#fff"
+      class="bg-[var(--primary-color)] text-#fff rounded-12rpx py-10rpx px-20rpx"
       @click="handleCallMe"
     >
       联系车主
@@ -21,6 +22,7 @@
 </template>
 
 <script lang="ts" setup>
+import { queryParse } from '@/utils/common'
 const phone = ref('')
 const carCode = ref('')
 
@@ -40,11 +42,17 @@ const handleCallMe = () => {
   })
 }
 
-onLoad((query) => {
-  console.log(query)
-  carCode.value = `粤${query.car}`
-  phone.value = query.phone
+onLoad((query: any) => {
+  // console.log(query)
+
   // scene 需要使用 decodeURIComponent 才能获取到生成二维码时传入的 scene
-  // const scene = decodeURIComponent(query.scene)
+  console.log(query)
+  const scene: any = decodeURIComponent(query.scene)
+  if (scene) {
+    const sceneData = queryParse(`?${scene}`)
+
+    carCode.value = `粤${sceneData.car}`
+    phone.value = sceneData.phone
+  }
 })
 </script>

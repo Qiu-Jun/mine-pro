@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description:
+ * @Date: 2024-05-27 16:25:58
+ * @LastEditTime: 2024-05-28 10:53:53
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\weapp\src\lib\service\request.ts
+ */
 import { mergeOps } from './helper/utils'
 import errTips from '@/constants/httpErrCode'
 import { clearStorage } from '../storage'
@@ -17,9 +25,15 @@ export default function request(options: Irequest) {
       success: (res) => {
         const { statusCode, data: resData } = res
         if (statusCode === 200) {
-          const { data, code, message } = resData as any
-          if (code === 10000) {
-            resolve({ data, code, message })
+          const { result, code, message } = resData as any
+          if (code === 200) {
+            resolve({ data: result, code, message })
+          } else if (code === 150) {
+            uni.showToast({
+              icon: 'none',
+              title: '接口次数上限，请联系管理员'
+            })
+            reject({ code, message, data: null })
           } else {
             uni.showToast({
               icon: 'none',

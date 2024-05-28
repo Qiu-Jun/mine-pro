@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description:
+ * @Date: 2024-05-27 16:25:58
+ * @LastEditTime: 2024-05-28 10:07:24
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\weapp\vite.config.ts
+ */
 import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import { resolve } from 'node:path'

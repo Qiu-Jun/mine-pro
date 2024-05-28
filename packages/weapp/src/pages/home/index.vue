@@ -7,10 +7,14 @@
  * @FilePath: \mine_weapp\src\pages\home\index.vue
 -->
 <template>
-  <view>s3</view>
+  <view class="container">
+    <!-- 星座运势 -->
+    <Horoscope />
+  </view>
 </template>
 
 <script lang="ts" setup>
+import Horoscope from './components/Horoscope.vue'
 const imgsList = [
   {
     id: 1,
