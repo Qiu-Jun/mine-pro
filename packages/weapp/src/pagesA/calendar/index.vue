@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-05-31 09:40:58
- * @LastEditTime: 2024-05-31 10:25:55
+ * @LastEditTime: 2024-05-31 10:42:33
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\weapp\src\pagesA\Calendar\index.vue
 -->
@@ -61,11 +61,9 @@ let calendarVal = 0
 
 const init = () => {
   calendarVal !== 0 &&
-    calendar(dayjs(calendarVal).format('YYYY-MM-DD')).then(
-      ({ result }: any) => {
-        result && (dateDetail.value = result)
-      }
-    )
+    calendar(dayjs(calendarVal).format('YYYY-MM-DD')).then(({ data }: any) => {
+      data && (dateDetail.value = data)
+    })
 }
 
 onLoad((ops: any) => {

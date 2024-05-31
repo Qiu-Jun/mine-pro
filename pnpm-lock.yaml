@@ -61,7 +61,7 @@ importers:
         version: 0.58.9(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0))
       unplugin-auto-import:
         specifier: ^0.16.6
-        version: 0.16.7(@vueuse/core@10.9.0(vue@3.4.27(typescript@5.4.5)))(rollup@4.18.0)
+        version: 0.16.7(@vueuse/core@10.9.0)(rollup@4.18.0)
       vue-tsc:
         specifier: ~1.8.27
         version: 1.8.27(typescript@5.4.5)
@@ -245,7 +245,7 @@ importers:
         version: 5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0)
       vite-plugin-checker:
         specifier: ~0.6.4
-        version: 0.6.4(eslint@7.32.0)(meow@13.2.0)(optionator@0.9.4)(stylelint@16.5.0(typescript@4.9.5))(typescript@4.9.5)(vite@5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0))(vue-tsc@1.8.27(typescript@4.9.5))
+        version: 0.6.4(eslint@7.32.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.5.0(typescript@4.9.5))(typescript@4.9.5)(vite@5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0))(vue-tsc@1.8.27(typescript@4.9.5))
       vite-plugin-inspect:
         specifier: ^0.8.4
         version: 0.8.4(rollup@4.18.0)(vite@5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0))
@@ -376,12 +376,18 @@ importers:
       '@dcloudio/uni-quickapp-webview':
         specifier: 3.0.0-3080720230703001
         version: 3.0.0-3080720230703001(postcss@8.4.38)(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.4.5))(vue@3.4.27(typescript@5.4.5))
+      dayjs:
+        specifier: ^1.11.11
+        version: 1.11.11
       pinia:
         specifier: 2.0.36
         version: 2.0.36(typescript@5.4.5)(vue@3.4.27(typescript@5.4.5))
       vue:
         specifier: ^3.3.4
         version: 3.4.27(typescript@5.4.5)
+      wot-design-uni:
+        specifier: ^1.2.22
+        version: 1.2.22(vue@3.4.27(typescript@5.4.5))
     devDependencies:
       '@dcloudio/types':
         specifier: ^3.3.2
@@ -416,6 +422,9 @@ importers:
       unocss-preset-weapp:
         specifier: ^0.57.1
         version: 0.57.1(rollup@4.18.0)
+      unplugin-auto-import:
+        specifier: ^0.17.6
+        version: 0.17.6(@vueuse/core@10.9.0(vue@3.4.27(typescript@5.4.5)))(rollup@4.18.0)
       vite:
         specifier: ^4.5.3
         version: 4.5.3(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0)
@@ -7898,6 +7907,18 @@ packages:
       '@vueuse/core':
         optional: true
 
+  unplugin-auto-import@0.17.6:
+    resolution: {integrity: sha512-dmX0Pex5DzMzVuALkexboOZvh51fL/BD6aoPO7qHoTYGlQp0GRKsREv2KMF1lzYI9SXKQiRxAjwzbQnrFFNydQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@nuxt/kit': ^3.2.2
+      '@vueuse/core': '*'
+    peerDependenciesMeta:
+      '@nuxt/kit':
+        optional: true
+      '@vueuse/core':
+        optional: true
+
   unplugin-transform-class@0.5.3:
     resolution: {integrity: sha512-4xBvfoeBDqlqi9aD0Hv3TTs8JpRs2h9l8LBMXIRXFNTf8biRk6hAQir+zEM/GpBKoMzvt7JqqbMIYzMazQZysQ==}
 
@@ -8284,6 +8305,12 @@ packages:
   word@0.3.0:
     resolution: {integrity: sha512-OELeY0Q61OXpdUfTp+oweA/vtLVg5VDOXh+3he3PNzLGG/y0oylSOC1xRVj0+l4vQ3tj/bB1HVHv1ocXkQceFA==}
     engines: {node: '>=0.8'}
+
+  wot-design-uni@1.2.22:
+    resolution: {integrity: sha512-sAM9+SyB94wkJXjtOOT4qDj6FClxlgcReSlLcWwZDKHzDQxnuvQfIX9AZjr80gpEL4vki9GthUl3pYGRVtyZoQ==}
+    engines: {HBuilderX: ^3.8.7}
+    peerDependencies:
+      vue: '>=3.2.47'
 
   wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
@@ -12157,6 +12184,17 @@ snapshots:
       '@types/node': 20.12.12
 
   '@vue/tsconfig@0.5.1': {}
+
+  '@vueuse/core@10.9.0':
+    dependencies:
+      '@types/web-bluetooth': 0.0.20
+      '@vueuse/metadata': 10.9.0
+      '@vueuse/shared': 10.9.0(vue@3.4.27(typescript@4.9.5))
+      vue-demi: 0.14.7(vue@3.4.27(typescript@4.9.5))
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    optional: true
 
   '@vueuse/core@10.9.0(vue@3.4.27(typescript@4.9.5))':
     dependencies:
@@ -17845,7 +17883,22 @@ snapshots:
     transitivePeerDependencies:
       - rollup
 
-  unplugin-auto-import@0.16.7(@vueuse/core@10.9.0(vue@3.4.27(typescript@5.4.5)))(rollup@4.18.0):
+  unplugin-auto-import@0.16.7(@vueuse/core@10.9.0)(rollup@4.18.0):
+    dependencies:
+      '@antfu/utils': 0.7.8
+      '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
+      fast-glob: 3.3.2
+      local-pkg: 0.5.0
+      magic-string: 0.30.10
+      minimatch: 9.0.4
+      unimport: 3.7.1(rollup@4.18.0)
+      unplugin: 1.10.1
+    optionalDependencies:
+      '@vueuse/core': 10.9.0
+    transitivePeerDependencies:
+      - rollup
+
+  unplugin-auto-import@0.17.6(@vueuse/core@10.9.0(vue@3.4.27(typescript@5.4.5)))(rollup@4.18.0):
     dependencies:
       '@antfu/utils': 0.7.8
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
@@ -17959,7 +18012,7 @@ snapshots:
       unist-util-stringify-position: 2.0.3
       vfile-message: 2.0.4
 
-  vite-plugin-checker@0.6.4(eslint@7.32.0)(meow@13.2.0)(optionator@0.9.4)(stylelint@16.5.0(typescript@4.9.5))(typescript@4.9.5)(vite@5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0))(vue-tsc@1.8.27(typescript@4.9.5)):
+  vite-plugin-checker@0.6.4(eslint@7.32.0)(meow@9.0.0)(optionator@0.9.4)(stylelint@16.5.0(typescript@4.9.5))(typescript@4.9.5)(vite@5.2.11(@types/node@20.12.12)(less@4.2.0)(sass@1.77.2)(sugarss@2.0.0)(terser@5.31.0))(vue-tsc@1.8.27(typescript@4.9.5)):
     dependencies:
       '@babel/code-frame': 7.24.6
       ansi-escapes: 4.3.2
@@ -17979,7 +18032,7 @@ snapshots:
       vscode-uri: 3.0.8
     optionalDependencies:
       eslint: 7.32.0
-      meow: 13.2.0
+      meow: 9.0.0
       optionator: 0.9.4
       stylelint: 16.5.0(typescript@4.9.5)
       typescript: 4.9.5
@@ -18316,6 +18369,10 @@ snapshots:
   word-wrap@1.2.5: {}
 
   word@0.3.0: {}
+
+  wot-design-uni@1.2.22(vue@3.4.27(typescript@5.4.5)):
+    dependencies:
+      vue: 3.4.27(typescript@5.4.5)
 
   wrap-ansi@6.2.0:
     dependencies:
