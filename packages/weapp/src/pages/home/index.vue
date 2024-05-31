@@ -2,74 +2,68 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-04-24 09:32:13
- * @LastEditTime: 2024-05-31 09:58:27
+ * @LastEditTime: 2024-05-31 14:59:55
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\weapp\src\pages\home\index.vue
 -->
 <template>
   <view class="container">
     <!-- swiper -->
-    <swiper
-      class="w-750rpx h-400rpx swiper-wrap"
-      indicator-dots
-      autoplay
-      circular
-      previous-margin="40rpx"
-      next-margin="40rpx"
-    >
-      <swiper-item v-for="(img, idx) in imgsList" :key="img.id">
-        <image
-          class="w-full h-full"
-          mode="scaleToFill"
-          :src="img.src"
-          :data-idx="idx"
-        />
-      </swiper-item>
-    </swiper>
+    <view class="card-swiper">
+      <wd-swiper
+        autoplay
+        :current="4"
+        custom-indicator-class="custom-indicator-class"
+        custom-image-class="custom-image"
+        custom-next-image-class="custom-image-prev"
+        custom-prev-image-class="custom-image-prev"
+        :indicator="{ type: 'dots' }"
+        :list="imgsList"
+        previousMargin="24px"
+        nextMargin="24px"
+        @click="onSwiperClick"
+      ></wd-swiper>
+    </view>
 
-    <!-- 星座运势 -->
-    <Horoscope />
+    <wd-divider color="#4D80F0" custom-class="my-20rpx">我的进度</wd-divider>
+    <view class="w-710rpx mx-auto bg-#fff rounded-12rpx f-center py-40rpx">
+      <wd-circle v-model="process" :text="`进度：${process}%`"></wd-circle>
+    </view>
 
     <!-- 日历 -->
-    <view class="w-710rpx mx-auto bg-#fff rounded-12rpx mt-20rpx">
-      <view class="flex justify-end items-center py-20rpx">
-        <wd-button type="primary" @click="handleCalendarDetail"
-          >查看选中日期黄历</wd-button
-        >
-      </view>
+    <wd-divider color="#4D80F0" custom-class="my-20rpx">日历</wd-divider>
+    <view class="w-710rpx mx-auto bg-#fff rounded-12rpx pu-20rpx">
       <wd-calendar-view
         :min-date="Date.now()"
         v-model="currentDataStand"
         @change="handleChange"
       />
     </view>
+
+    <!-- 星座运势 -->
+    <wd-divider color="#4D80F0" custom-class="my-20rpx">星座运势</wd-divider>
+    <Horoscope />
   </view>
 </template>
 
 <script lang="ts" setup>
 import Horoscope from './components/Horoscope.vue'
+// swiper start
 const imgsList = [
-  {
-    id: 1,
-    src: 'https://3k2j857423.goho.co/uploads/w1.jpg'
-  },
-  {
-    id: 2,
-    src: 'https://3k2j857423.goho.co/uploads/w2.jpg'
-  },
-  {
-    id: 3,
-    src: 'https://3k2j857423.goho.co/uploads/fs.jpg'
-  },
-  {
-    id: 4,
-    src: 'https://3k2j857423.goho.co/uploads/li.jpg'
-  }
+  'https://3k2j857423.goho.co/uploads/w1.jpg',
+  'https://3k2j857423.goho.co/uploads/w2.jpg',
+  'https://3k2j857423.goho.co/uploads/fs.jpg',
+  'https://3k2j857423.goho.co/uploads/li.jpg'
 ]
-// const current = ref(0)
-// const onSwiperChange = (e: UniHelper.SwiperOnChangeEvent) => {
-//   current.value = e.detail.current
-// }
+const onSwiperClick = (data: { index: number }) => {
+  uni.previewImage({
+    current: data.index,
+    urls: imgsList
+  })
+}
+// swiper end
+
+const process = ref(60)
 
 const currentDataStand = ref(Date.now())
 
@@ -87,10 +81,20 @@ const handleCalendarDetail = () => {
 </script>
 
 <style lang="scss" scoped>
-.swiper-wrap {
-  .active {
-    transform: scale(1.14) !important;
-    transition: all 0.2s ease-in 0s;
+.card-swiper {
+  --wot-swiper-radius: 0;
+  --wot-swiper-item-padding: 0 24rpx;
+  --wot-swiper-nav-dot-color: #e7e7e7;
+  --wot-swiper-nav-dot-active-color: #4d80f0;
+  padding-bottom: 24rpx;
+  :deep(.custom-indicator-class) {
+    bottom: -16px;
+  }
+  :deep(.custom-image) {
+    border-radius: 12rpx;
+  }
+  :deep(.custom-image-prev) {
+    height: 168px !important;
   }
 }
 </style>
