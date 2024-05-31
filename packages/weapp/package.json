@@ -51,8 +51,10 @@
     "@dcloudio/uni-mp-toutiao": "3.0.0-3080720230703001",
     "@dcloudio/uni-mp-weixin": "3.0.0-3080720230703001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-3080720230703001",
+    "dayjs": "^1.11.11",
     "pinia": "2.0.36",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "wot-design-uni": "^1.2.22"
   },
   "devDependencies": {
     "@dcloudio/types": "^3.3.2",

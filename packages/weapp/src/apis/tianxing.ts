@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-05-28 10:29:45
- * @LastEditTime: 2024-05-28 11:16:50
+ * @LastEditTime: 2024-05-31 09:51:27
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\weapp\src\apis\tianxing.ts
  */
@@ -29,6 +29,17 @@ export function matchYou({ me, he }: { me: string; he?: string }) {
       key: apiKey,
       me,
       he
+    }
+  })
+}
+
+// 黄历查询
+export function calendar(date: string) {
+  return request({
+    url: '/lunar/index',
+    params: {
+      key: apiKey,
+      date
     }
   })
 }

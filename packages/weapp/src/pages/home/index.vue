@@ -2,9 +2,9 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-04-24 09:32:13
- * @LastEditTime: 2024-05-28 22:50:28
+ * @LastEditTime: 2024-05-31 09:58:27
  * @LastEditors: June
- * @FilePath: /mine-pro/packages/weapp/src/pages/home/index.vue
+ * @FilePath: \mine-pro\packages\weapp\src\pages\home\index.vue
 -->
 <template>
   <view class="container">
@@ -18,12 +18,31 @@
       next-margin="40rpx"
     >
       <swiper-item v-for="(img, idx) in imgsList" :key="img.id">
-        <image class="w-full h-full" mode="scaleToFill" :src="img.src" />
+        <image
+          class="w-full h-full"
+          mode="scaleToFill"
+          :src="img.src"
+          :data-idx="idx"
+        />
       </swiper-item>
     </swiper>
 
     <!-- 星座运势 -->
     <Horoscope />
+
+    <!-- 日历 -->
+    <view class="w-710rpx mx-auto bg-#fff rounded-12rpx mt-20rpx">
+      <view class="flex justify-end items-center py-20rpx">
+        <wd-button type="primary" @click="handleCalendarDetail"
+          >查看选中日期黄历</wd-button
+        >
+      </view>
+      <wd-calendar-view
+        :min-date="Date.now()"
+        v-model="currentDataStand"
+        @change="handleChange"
+      />
+    </view>
   </view>
 </template>
 
@@ -51,6 +70,20 @@ const imgsList = [
 // const onSwiperChange = (e: UniHelper.SwiperOnChangeEvent) => {
 //   current.value = e.detail.current
 // }
+
+const currentDataStand = ref(Date.now())
+
+function handleChange({ value }: { value: number }) {
+  currentDataStand.value = value
+}
+
+const handleCalendarDetail = () => {
+  const _currentDataStand = unref(currentDataStand)
+  _currentDataStand &&
+    uni.navigateTo({
+      url: `/pagesA/calendar/index?current=${_currentDataStand}`
+    })
+}
 </script>
 
 <style lang="scss" scoped>
