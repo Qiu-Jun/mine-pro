@@ -2,14 +2,14 @@
  * @Description: md
  * @Author: June
  * @Date: 2024-04-24 09:32:13
- * @FilePath: \@minepro\README.md
- * @LastEditTime: 2024-05-25 16:03:17
+ * @FilePath: /mine-pro/README.md
+ * @LastEditTime: 2024-06-02 09:47:13
  * @LastEditors: June
 -->
 
 ## mini-pro
 
-#### 目录说梦
+#### 目录说明
 
 - packages
   - admin 后台
