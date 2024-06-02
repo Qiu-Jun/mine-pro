@@ -3,36 +3,40 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2023-11-09 14:25:16
+ * @LastEditTime: 2024-06-02 10:08:21
  */
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { NestExpressApplication } from '@nestjs/platform-express';
-import { VersioningType } from '@nestjs/common';
-import { join } from 'path';
-import HttpFilter from './commom/errorHandle';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { NestFactory } from '@nestjs/core'
+import { AppModule } from './app.module'
+import { NestExpressApplication } from '@nestjs/platform-express'
+import { VersioningType, UnprocessableEntityException } from '@nestjs/common'
+import { join } from 'path'
+import HttpFilter from './commom/errorHandle'
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
+
+const SERVER_PORT = process.env.SERVER_PORT
+
+console.log('端口', process.env, SERVER_PORT)
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
-    cors: true,
-  });
+    cors: true
+  })
   app.enableVersioning({
-    type: VersioningType.URI,
-  });
+    type: VersioningType.URI
+  })
   app.useStaticAssets(join(__dirname, 'resources'), {
-    prefix: '/static',
-  });
-  app.useGlobalFilters(new HttpFilter());
+    prefix: '/static'
+  })
+  app.useGlobalFilters(new HttpFilter())
 
   const options = new DocumentBuilder()
     .addBearerAuth() // 添加token信息
     .setTitle('接口文档')
     .setDescription('描述信息')
     .setVersion('1.0.0')
-    .build();
-  const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('/api-docs', app, document);
-  await app.listen(3000);
+    .build()
+  const document = SwaggerModule.createDocument(app, options)
+  SwaggerModule.setup('/api-docs', app, document)
+  await app.listen(3000)
 }
-bootstrap();
+bootstrap()
