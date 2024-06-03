@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-04-24 09:32:13
- * @LastEditTime: 2024-05-31 14:59:55
+ * @LastEditTime: 2024-05-31 17:28:57
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\weapp\src\pages\home\index.vue
 -->
@@ -41,8 +41,8 @@
     </view>
 
     <!-- 星座运势 -->
-    <wd-divider color="#4D80F0" custom-class="my-20rpx">星座运势</wd-divider>
-    <Horoscope />
+    <!-- <wd-divider color="#4D80F0" custom-class="my-20rpx">星座运势</wd-divider>
+    <Horoscope /> -->
   </view>
 </template>
 

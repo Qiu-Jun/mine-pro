@@ -12,6 +12,8 @@ node_modules
 dist
 *.local
 
+carData.ts
+
 # Editor directories and files
 .idea
 *.suo

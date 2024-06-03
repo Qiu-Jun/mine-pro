@@ -1,5 +1,5 @@
 {
-  "name": "uni_vite_vue3_template",
+  "name": "weapp",
   "version": "0.0.1",
   "scripts": {
     "dev:app": "uni -p app",
