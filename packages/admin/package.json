@@ -1,16 +1,7 @@
 {
-  "name": "server",
-  "version": "2.0.0",
+  "name": "admin",
+  "version": "0.0.1",
   "type": "module",
-  "engines": {
-    "node": ">=18",
-    "pnpm": ">=9.0.2"
-  },
-  "author": {
-    "name": "buqiyuan",
-    "email": "1743369777@qq.com",
-    "url": "https://github.com/buqiyuan"
-  },
   "scripts": {
     "serve": "npm run dev",
     "dev": "vite dev",

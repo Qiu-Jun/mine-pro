@@ -6,6 +6,11 @@
     "start:dev": "cross-env NODE_ENV=development nest start --watch",
     "start:debug": "cross-env NODE_ENV=development nest start --debug --watch",
     "start:prod": "cross-env NODE_ENV=production node dist/main.js",
+    "typeorm": "typeorm-ts-node-esm -d ./dist/config/database.config.js",
+    "migration:create": "npx typeorm migration:create ./src/migrations/initData",
+    "migration:generate": "npx run typeorm migration:generate ./src/migrations/update-table_$(echo $npm_package_version | sed 's/\\./_/g')",
+    "migration:run": "npx typeorm -- migration:run",
+    "migration:revert": "npx typeorm -- migration:revert",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -24,7 +29,8 @@
     "dotenv": "^16.4.5",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",

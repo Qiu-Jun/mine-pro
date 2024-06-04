@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-02 10:08:21
+ * @LastEditTime: 2024-06-04 13:49:38
  */
 import { NestFactory } from '@nestjs/core'
 import { AppModule } from './app.module'
@@ -12,10 +12,9 @@ import { VersioningType, UnprocessableEntityException } from '@nestjs/common'
 import { join } from 'path'
 import HttpFilter from './commom/errorHandle'
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger'
+import { serverConfig } from './global/env'
 
-const SERVER_PORT = process.env.SERVER_PORT
-
-console.log('端口', process.env, SERVER_PORT)
+console.log('端口', serverConfig.port, serverConfig)
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -24,9 +23,11 @@ async function bootstrap() {
   app.enableVersioning({
     type: VersioningType.URI
   })
-  app.useStaticAssets(join(__dirname, 'resources'), {
+
+  app.useStaticAssets(join(__dirname, '..', 'static'), {
     prefix: '/static'
   })
+  app.useStaticAssets(join(__dirname, '..', 'uploads'), { prefix: '/uploads' })
   app.useGlobalFilters(new HttpFilter())
 
   const options = new DocumentBuilder()
@@ -37,6 +38,6 @@ async function bootstrap() {
     .build()
   const document = SwaggerModule.createDocument(app, options)
   SwaggerModule.setup('/api-docs', app, document)
-  await app.listen(3000)
+  await app.listen(serverConfig.port)
 }
 bootstrap()
