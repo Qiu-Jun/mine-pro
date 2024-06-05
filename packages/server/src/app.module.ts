@@ -3,10 +3,11 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-05 11:08:04
+ * @LastEditTime: 2024-06-05 11:12:29
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { Module } from '@nestjs/common'
+import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core'
 import { ConfigModule } from '@nestjs/config'
 import { ThrottlerGuard, ThrottlerModule, seconds } from '@nestjs/throttler'
 import { UserModule } from './user/user.module'
@@ -38,6 +39,6 @@ import { SharedModule } from '@/shared/shared.module'
     TestModule
   ],
 
-  providers: []
+  providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }]
 })
 export class AppModule {}
