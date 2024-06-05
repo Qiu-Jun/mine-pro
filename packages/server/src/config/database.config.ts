@@ -1,29 +1,18 @@
-/*
- * @Author: June
- * @Description:
- * @Date: 2024-06-04 11:32:19
- * @LastEditTime: 2024-06-04 17:27:23
- * @LastEditors: June
- * @FilePath: \mine-pro\packages\server\src\config\database.config.ts
- */
 import { ConfigType, registerAs } from '@nestjs/config'
 import { DataSource, DataSourceOptions } from 'typeorm'
-import { mysqlConfig } from '@/global/env'
-import dotenv from 'dotenv'
-
-dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
+import { envString, envBoolean, envNumber } from '@/global/env'
 
 // 当前通过 npm scripts 执行的命令
 const currentScript = process.env.npm_lifecycle_event
 
-export const dataSourceOptions: DataSourceOptions = {
+const dataSourceOptions: DataSourceOptions = {
   type: 'mysql',
-  host: mysqlConfig.host,
-  port: mysqlConfig.port,
-  username: mysqlConfig.username,
-  password: mysqlConfig.password,
-  database: mysqlConfig.database,
-  synchronize: mysqlConfig.synchronize,
+  host: envString('MYSQL_HOST', '127.0.0.1'),
+  port: envNumber('MYSQL_PORT', 3306),
+  username: envString('MYSQL_USERNAME'),
+  password: envString('MYSQL_PASSWORD'),
+  database: envString('MYSQL_DATABASE'),
+  synchronize: envBoolean('MYSQL_SYNCHRONIZE', false),
   // 解决通过 pnpm migration:run 初始化数据时，遇到的 SET FOREIGN_KEY_CHECKS = 0; 等语句报错问题, 仅在执行数据迁移操作时设为 true
   multipleStatements: currentScript === 'typeorm',
   entities: ['dist/modules/**/*.entity{.ts,.js}'],
