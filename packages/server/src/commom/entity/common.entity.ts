@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 08:49:55
- * @LastEditTime: 2024-06-05 08:58:21
+ * @LastEditTime: 2024-06-05 17:25:22
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\commom\entity\common.entity.ts
  */
@@ -29,7 +29,7 @@ import {
 
 export abstract class CommonEntity extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: string
+  id: number
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date

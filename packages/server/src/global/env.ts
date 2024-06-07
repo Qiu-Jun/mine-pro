@@ -11,14 +11,13 @@ export type BaseType = boolean | number | string | undefined | null
  * @param defaultValue 默认值
  * @param callback 格式化函数
  */
-
 function fromatValue<T extends BaseType = string>(
   key: string,
   defaultValue: T,
   callback?: (value: string) => T
 ): T {
   const value: string | undefined = process.env[key]
-
+  console.log(key, value)
   if (typeof value === 'undefined') return defaultValue
 
   if (!callback) return value as unknown as T
