@@ -5,7 +5,7 @@
  Source Server Type    : MySQL
  Source Server Version : 80030 (8.0.30)
  Source Host           : localhost:13307
- Source Schema         : nest_admin
+ Source Schema         : admin_server
 
  Target Server Type    : MySQL
  Target Server Version : 80030 (8.0.30)

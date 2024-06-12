@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-05 17:44:57
+ * @LastEditTime: 2024-06-12 10:43:31
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { Module } from '@nestjs/common'
@@ -17,7 +17,7 @@ import { join } from 'path'
 
 import { SharedModule } from '@/shared/shared.module'
 import { DatabaseModule } from './shared/database/database.module'
-// import { SystemModule } from './modules/system/system.module'
+import { SystemModule } from './modules/system/system.module'
 
 const rootPath = process.cwd()
 @Module({
@@ -42,6 +42,8 @@ const rootPath = process.cwd()
 
     SharedModule,
     DatabaseModule,
+
+    // SystemModule,
 
     UploadModule,
     TestModule

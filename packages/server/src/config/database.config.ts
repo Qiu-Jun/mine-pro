@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description:
+ * @Date: 2024-06-05 10:23:25
+ * @LastEditTime: 2024-06-12 11:31:04
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\server\src\config\database.config.ts
+ */
 import { ConfigType, registerAs } from '@nestjs/config'
 import { DataSource, DataSourceOptions } from 'typeorm'
 import { envString, envBoolean, envNumber } from '@/global/env'

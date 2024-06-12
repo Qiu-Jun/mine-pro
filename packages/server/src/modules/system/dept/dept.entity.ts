@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description:
+ * @Date: 2024-06-05 16:46:59
+ * @LastEditTime: 2024-06-12 10:17:07
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\server\src\modules\system\dept\dept.entity.ts
+ */
 import { ApiHideProperty, ApiProperty } from '@nestjs/swagger'
 import {
   Column,
@@ -30,7 +38,7 @@ export class DeptEntity extends CommonEntity {
   @TreeParent({ onDelete: 'SET NULL' })
   parent?: DeptEntity
 
-  @ApiHideProperty()
-  @OneToMany(() => UserEntity, (user) => user.dept)
-  users: Relation<UserEntity[]>
+  // @ApiHideProperty()
+  // @OneToMany(() => UserEntity, (user) => user.dept)
+  // users: Relation<UserEntity[]>
 }

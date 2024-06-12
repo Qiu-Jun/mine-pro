@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description:
+ * @Date: 2024-06-05 11:58:06
+ * @LastEditTime: 2024-06-12 11:09:47
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\server\src\shared\database\database.module.ts
+ */
 import { Module } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { TypeOrmModule } from '@nestjs/typeorm'

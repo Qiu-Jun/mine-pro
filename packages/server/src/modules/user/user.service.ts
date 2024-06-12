@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 16:26:46
- * @LastEditTime: 2024-06-05 17:23:12
+ * @LastEditTime: 2024-06-12 10:19:56
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\user\user.service.ts
  */
@@ -52,10 +52,10 @@ export class UserService {
     // @InjectRedis()
     // private readonly redis: Redis,
     @InjectRepository(UserEntity)
-    private readonly userRepository: Repository<UserEntity>,
-    @InjectRepository(RoleEntity)
-    private readonly roleRepository: Repository<RoleEntity>,
-    @InjectEntityManager() private entityManager: EntityManager
+    private readonly userRepository: Repository<UserEntity>
+    // @InjectRepository(RoleEntity)
+    // private readonly roleRepository: Repository<RoleEntity>,
+    // @InjectEntityManager() private entityManager: EntityManager
     // private readonly paramConfigService: ParamConfigService,
     // private readonly qqService: QQService
   ) {}
@@ -167,27 +167,27 @@ export class UserService {
     if (!isEmpty(exists))
       throw new BusinessException(ErrorEnum.SYSTEM_USER_EXISTS)
 
-    await this.entityManager.transaction(async (manager) => {
-      // const salt = randomValue(32)
-      // if (!password) {
-      //   const initPassword = await this.paramConfigService.findValueByKey(
-      //     SYS_USER_INITPASSWORD
-      //   )
-      //   password = md5(`${initPassword ?? '123456'}${salt}`)
-      // } else {
-      //   password = md5(`${password ?? '123456'}${salt}`)
-      // }
-      // const u = manager.create(UserEntity, {
-      //   username,
-      //   password,
-      //   ...data,
-      //   psalt: salt,
-      //   roles: await this.roleRepository.findBy({ id: In(roleIds) }),
-      //   dept: await DeptEntity.findOneBy({ id: deptId })
-      // })
-      // const result = await manager.save(u)
-      // return result
-    })
+    // await this.entityManager.transaction(async (manager) => {
+    //   // const salt = randomValue(32)
+    //   // if (!password) {
+    //   //   const initPassword = await this.paramConfigService.findValueByKey(
+    //   //     SYS_USER_INITPASSWORD
+    //   //   )
+    //   //   password = md5(`${initPassword ?? '123456'}${salt}`)
+    //   // } else {
+    //   //   password = md5(`${password ?? '123456'}${salt}`)
+    //   // }
+    //   // const u = manager.create(UserEntity, {
+    //   //   username,
+    //   //   password,
+    //   //   ...data,
+    //   //   psalt: salt,
+    //   //   roles: await this.roleRepository.findBy({ id: In(roleIds) }),
+    //   //   dept: await DeptEntity.findOneBy({ id: deptId })
+    //   // })
+    //   // const result = await manager.save(u)
+    //   // return result
+    // })
   }
 
   /**
@@ -197,40 +197,37 @@ export class UserService {
     id: number,
     { password, deptId, roleIds, status, ...data }: UserUpdateDto
   ): Promise<void> {
-    await this.entityManager.transaction(async (manager) => {
-      if (password) await this.forceUpdatePassword(id, password)
-
-      await manager.update(UserEntity, id, {
-        ...data,
-        status
-      })
-
-      const user = await this.userRepository
-        .createQueryBuilder('user')
-        .leftJoinAndSelect('user.roles', 'roles')
-        .leftJoinAndSelect('user.dept', 'dept')
-        .where('user.id = :id', { id })
-        .getOne()
-      if (roleIds) {
-        await manager
-          .createQueryBuilder()
-          .relation(UserEntity, 'roles')
-          .of(id)
-          .addAndRemove(roleIds, user.roles)
-      }
-      if (deptId) {
-        await manager
-          .createQueryBuilder()
-          .relation(UserEntity, 'dept')
-          .of(id)
-          .set(deptId)
-      }
-
-      if (status === 0) {
-        // 禁用状态
-        await this.forbidden(id)
-      }
-    })
+    // await this.entityManager.transaction(async (manager) => {
+    //   if (password) await this.forceUpdatePassword(id, password)
+    //   await manager.update(UserEntity, id, {
+    //     ...data,
+    //     status
+    //   })
+    //   const user = await this.userRepository
+    //     .createQueryBuilder('user')
+    //     .leftJoinAndSelect('user.roles', 'roles')
+    //     .leftJoinAndSelect('user.dept', 'dept')
+    //     .where('user.id = :id', { id })
+    //     .getOne()
+    //   // if (roleIds) {
+    //   //   await manager
+    //   //     .createQueryBuilder()
+    //   //     .relation(UserEntity, 'roles')
+    //   //     .of(id)
+    //   //     .addAndRemove(roleIds, user.roles)
+    //   // }
+    //   if (deptId) {
+    //     await manager
+    //       .createQueryBuilder()
+    //       .relation(UserEntity, 'dept')
+    //       .of(id)
+    //       .set(deptId)
+    //   }
+    //   if (status === 0) {
+    //     // 禁用状态
+    //     await this.forbidden(id)
+    //   }
+    // })
   }
 
   /**
@@ -266,10 +263,11 @@ export class UserService {
    * 查找超管的用户ID
    */
   async findRootUserId(): Promise<number> {
-    const user = await this.userRepository.findOneBy({
-      roles: { id: ROOT_ROLE_ID }
-    })
-    return user.id
+    // const user = await this.userRepository.findOneBy({
+    //   roles: { id: ROOT_ROLE_ID }
+    // })
+    // return user.id
+    return 11
   }
 
   /**
@@ -368,17 +366,17 @@ export class UserService {
     if (!isEmpty(exists))
       throw new BusinessException(ErrorEnum.SYSTEM_USER_EXISTS)
 
-    await this.entityManager.transaction(async (manager) => {
-      // const salt = randomValue(32)
-      // const password = md5(`${data.password ?? 'a123456'}${salt}`)
-      // const u = manager.create(UserEntity, {
-      //   username,
-      //   password,
-      //   status: 1,
-      //   psalt: salt
-      // })
-      // const user = await manager.save(u)
-      // return user
-    })
+    // await this.entityManager.transaction(async (manager) => {
+    //   // const salt = randomValue(32)
+    //   // const password = md5(`${data.password ?? 'a123456'}${salt}`)
+    //   // const u = manager.create(UserEntity, {
+    //   //   username,
+    //   //   password,
+    //   //   status: 1,
+    //   //   psalt: salt
+    //   // })
+    //   // const user = await manager.save(u)
+    //   // return user
+    // })
   }
 }
