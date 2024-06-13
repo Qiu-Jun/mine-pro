@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description: 
+ * @Date: 2024-06-04 11:37:34
+ * @LastEditTime: 2024-06-13 08:16:30
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\server\src\global\env.ts
+ */
 export const isDev = process.env.NODE_ENV === 'development'
 
 /**
@@ -17,7 +25,6 @@ function fromatValue<T extends BaseType = string>(
   callback?: (value: string) => T
 ): T {
   const value: string | undefined = process.env[key]
-  console.log(key, value)
   if (typeof value === 'undefined') return defaultValue
 
   if (!callback) return value as unknown as T

@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-12 11:54:48
+ * @LastEditTime: 2024-06-13 11:10:04
  */
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
@@ -18,7 +18,6 @@ import HttpFilter from './commom/errorHandle'
 import { setupSwagger } from './app.swagger'
 import { isDev } from './global/env'
 import { LoggerService } from './shared/logger/logger.service'
-import fastifyStatic from '@fastify/static'
 import type { ConfigKeyPaths } from './config'
 
 declare const module: any
@@ -35,11 +34,10 @@ async function bootstrap() {
   app.enableVersioning({
     type: VersioningType.URI
   })
-
-  app.register(fastifyStatic, {
+  app.useStaticAssets( {
     // 暂用  后面改回static
     root: join(__dirname, '..', 'uploads'), // 静态资源目录
-    prefix: '/uploads' // 访问静态资源的URL前缀
+    prefix: '/uploads/' // 访问静态资源的URL前缀
     // root: join(__dirname, '..', 'static'), // 静态资源目录
     // prefix: '/static' // 访问静态资源的URL前缀
   })

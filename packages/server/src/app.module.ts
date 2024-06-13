@@ -3,15 +3,13 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-12 10:43:31
+ * @LastEditTime: 2024-06-12 16:45:50
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { Module } from '@nestjs/common'
 import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core'
 import { ConfigModule } from '@nestjs/config'
 import { ThrottlerGuard, ThrottlerModule, seconds } from '@nestjs/throttler'
-import { UploadModule } from './upload/upload.module'
-import { TestModule } from './test/test.module'
 import config from '@/config'
 import { join } from 'path'
 
@@ -43,10 +41,7 @@ const rootPath = process.cwd()
     SharedModule,
     DatabaseModule,
 
-    // SystemModule,
-
-    UploadModule,
-    TestModule
+    SystemModule
   ],
 
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }]
