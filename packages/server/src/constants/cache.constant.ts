@@ -1,0 +1,18 @@
+/*
+ * @Author: June
+ * @Description: 
+ * @Date: 2024-06-13 14:11:59
+ * @LastEditTime: 2024-06-13 14:12:15
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\server\src\constants\cache.constant.ts
+ */
+export enum RedisKeys {
+  AccessIp = 'access_ip',
+  CAPTCHA_IMG_PREFIX = 'captcha:img:',
+  AUTH_TOKEN_PREFIX = 'auth:token:',
+  AUTH_PERM_PREFIX = 'auth:permission:',
+  AUTH_PASSWORD_V_PREFIX = 'auth:passwordVersion:',
+  ONLINE_USER_PREFIX = 'online:user:',
+  TOKEN_BLACKLIST_PREFIX = 'token:blacklist:',
+}
+export const API_CACHE_PREFIX = 'api-cache:'

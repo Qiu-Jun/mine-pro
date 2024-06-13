@@ -1,14 +1,14 @@
 /*
  * @Author: June
- * @Description:
+ * @Description: 
  * @Date: 2024-06-05 16:51:42
- * @LastEditTime: 2024-06-05 16:53:01
+ * @LastEditTime: 2024-06-13 14:50:03
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\menu\menu.entity.ts
  */
 import { Column, Entity, ManyToMany, Relation } from 'typeorm'
 
-import { CommonEntity } from '@/commom/entity/common.entity'
+import { CommonEntity } from '@/common/entity/common.entity'
 
 import { RoleEntity } from '../role/role.entity'
 
@@ -56,8 +56,8 @@ export class MenuEntity extends CommonEntity {
   @Column({ type: 'tinyint', default: 1 })
   status: number
 
-  @ManyToMany(() => RoleEntity, (role) => role.menus, {
-    onDelete: 'CASCADE'
+  @ManyToMany(() => RoleEntity, role => role.menus, {
+    onDelete: 'CASCADE',
   })
   roles: Relation<RoleEntity[]>
 }

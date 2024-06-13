@@ -2,14 +2,14 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 16:47:45
- * @LastEditTime: 2024-06-12 10:18:05
+ * @LastEditTime: 2024-06-13 14:46:53
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\role\role.entity.ts
  */
 import { ApiHideProperty, ApiProperty } from '@nestjs/swagger'
 import { Column, Entity, JoinTable, ManyToMany, Relation } from 'typeorm'
 
-import { CommonEntity } from '@/commom/entity/common.entity'
+import { CommonEntity } from '@/common/entity/common.entity'
 
 import { UserEntity } from '../../user/user.entity'
 import { MenuEntity } from '../menu/menu.entity'
@@ -36,16 +36,16 @@ export class RoleEntity extends CommonEntity {
   @ApiProperty({ description: '是否默认用户' })
   default: boolean
 
-  // @ApiHideProperty()
-  // @ManyToMany(() => UserEntity, (user) => user.roles)
-  // users: Relation<UserEntity[]>
+  @ApiHideProperty()
+  @ManyToMany(() => UserEntity, user => user.roles)
+  users: Relation<UserEntity[]>
 
   @ApiHideProperty()
-  @ManyToMany(() => MenuEntity, (menu) => menu.roles, {})
+  @ManyToMany(() => MenuEntity, menu => menu.roles, {})
   @JoinTable({
     name: 'sys_role_menus',
     joinColumn: { name: 'role_id', referencedColumnName: 'id' },
-    inverseJoinColumn: { name: 'menu_id', referencedColumnName: 'id' }
+    inverseJoinColumn: { name: 'menu_id', referencedColumnName: 'id' },
   })
   menus: Relation<MenuEntity[]>
 }

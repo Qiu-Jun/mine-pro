@@ -10,9 +10,9 @@ import { INestApplication, Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
 
-import { API_SECURITY_AUTH } from './commom/decorators/swagger.decorator'
-import { CommonEntity } from './commom/entity/common.entity'
-import { ResOp, TreeResult } from './commom/model/response.model'
+import { API_SECURITY_AUTH } from '@/common/decorators/swagger.decorator'
+import { CommonEntity } from '@/common/entity/common.entity'
+import { ResOp, TreeResult } from '@/common/model/response.model'
 import { ConfigKeyPaths, IAppConfig, ISwaggerConfig } from './config'
 import { Pagination } from './helper/paginate/pagination'
 

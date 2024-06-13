@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 16:46:59
- * @LastEditTime: 2024-06-12 10:17:07
+ * @LastEditTime: 2024-06-13 14:31:04
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\dept\dept.entity.ts
  */
@@ -17,7 +17,7 @@ import {
   TreeParent
 } from 'typeorm'
 
-import { CommonEntity } from '@/commom/entity/common.entity'
+import { CommonEntity } from '@/common/entity/common.entity'
 
 import { UserEntity } from '../../user/user.entity'
 

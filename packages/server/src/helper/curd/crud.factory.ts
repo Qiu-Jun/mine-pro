@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 11:23:50
- * @LastEditTime: 2024-06-05 11:31:22
+ * @LastEditTime: 2024-06-13 14:31:32
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\helper\curd\crud.factory.ts
  */
@@ -21,9 +21,9 @@ import {
 import { ApiBody, IntersectionType, PartialType } from '@nestjs/swagger'
 import { upperFirst } from 'lodash'
 import pluralize from 'pluralize'
-import { ApiResult } from '@/commom/decorators/api-result.decorator'
-import { IdParam } from '@/commom/decorators/id-param.decorator'
-import { PagerDto } from '@/commom/dto/pager.dto'
+import { ApiResult } from '@/common/decorators/api-result.decorator'
+import { IdParam } from '@/common/decorators/id-param.decorator'
+import { PagerDto } from '@/common/dto/pager.dto'
 import { BaseService } from './base.service'
 
 export function BaseCrudFactory<E extends new (...args: any[]) => any>({

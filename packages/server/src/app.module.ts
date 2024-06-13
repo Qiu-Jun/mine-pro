@@ -3,10 +3,10 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-12 16:45:50
+ * @LastEditTime: 2024-06-13 17:35:29
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
-import { Module } from '@nestjs/common'
+import { ClassSerializerInterceptor, Module } from '@nestjs/common'
 import { APP_FILTER, APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core'
 import { ConfigModule } from '@nestjs/config'
 import { ThrottlerGuard, ThrottlerModule, seconds } from '@nestjs/throttler'
@@ -14,8 +14,9 @@ import config from '@/config'
 import { join } from 'path'
 
 import { SharedModule } from '@/shared/shared.module'
-import { DatabaseModule } from './shared/database/database.module'
-import { SystemModule } from './modules/system/system.module'
+import { DatabaseModule } from '@/shared/database/database.module'
+
+import { SystemModule } from '@/modules/system/system.module'
 
 const rootPath = process.cwd()
 @Module({
@@ -44,6 +45,9 @@ const rootPath = process.cwd()
     SystemModule
   ],
 
-  providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }]
+  providers: [
+    { provide: APP_GUARD, useClass: ThrottlerGuard },
+    { provide: APP_INTERCEPTOR, useClass: ClassSerializerInterceptor }, 
+  ]
 })
 export class AppModule {}

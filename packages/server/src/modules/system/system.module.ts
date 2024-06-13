@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 17:27:00
- * @LastEditTime: 2024-06-05 17:31:55
+ * @LastEditTime: 2024-06-13 17:22:00
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\system.module.ts
  */
@@ -14,22 +14,22 @@ import { UserModule } from '../user/user.module'
 // import { DictItemModule } from './dict-item/dict-item.module'
 // import { DictTypeModule } from './dict-type/dict-type.module'
 // import { LogModule } from './log/log.module'
-// import { MenuModule } from './menu/menu.module'
+import { MenuModule } from './menu/menu.module'
 // import { OnlineModule } from './online/online.module'
-// import { ParamConfigModule } from './param-config/param-config.module'
-// import { RoleModule } from './role/role.module'
+import { ParamConfigModule } from './param-config/param-config.module'
+import { RoleModule } from './role/role.module'
 // import { ServeModule } from './serve/serve.module'
 // import { TaskModule } from './task/task.module'
 
 const modules = [
-  UserModule
-  //   RoleModule,
+  UserModule,
+  RoleModule,
 
-  //   MenuModule,
+  MenuModule,
   //   DeptModule,
   //   DictTypeModule,
   //   DictItemModule,
-  //   ParamConfigModule,
+  ParamConfigModule,
   //   LogModule,
   //   TaskModule,
   //   OnlineModule,

@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 10:33:15
- * @LastEditTime: 2024-06-05 10:33:36
+ * @LastEditTime: 2024-06-13 16:21:54
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\config\redis.config.ts
  */

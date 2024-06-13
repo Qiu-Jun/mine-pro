@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-13 11:10:04
+ * @LastEditTime: 2024-06-13 17:42:22
  */
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
@@ -12,12 +12,14 @@ import {
   FastifyAdapter,
   NestFastifyApplication
 } from '@nestjs/platform-fastify'
+import { useContainer } from 'class-validator'
 import { VersioningType, Logger } from '@nestjs/common'
 import { join } from 'path'
-import HttpFilter from './commom/errorHandle'
+import HttpFilter from '@/common/errorHandle'
 import { setupSwagger } from './app.swagger'
 import { isDev } from './global/env'
 import { LoggerService } from './shared/logger/logger.service'
+
 import type { ConfigKeyPaths } from './config'
 
 declare const module: any
@@ -30,6 +32,7 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService<ConfigKeyPaths>)
   const { port, globalPrefix } = configService.get('app', { infer: true })
+  useContainer(app.select(AppModule), { fallbackOnErrors: true })
 
   app.enableVersioning({
     type: VersioningType.URI

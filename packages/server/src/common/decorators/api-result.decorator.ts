@@ -1,6 +1,14 @@
+/*
+ * @Author: June
+ * @Description: 
+ * @Date: 2024-06-05 11:29:29
+ * @LastEditTime: 2024-06-13 14:31:36
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\server\src\common\decorators\api-result.decorator.ts
+ */
 import { HttpStatus, Type, applyDecorators } from '@nestjs/common'
 import { ApiExtraModels, ApiResponse, getSchemaPath } from '@nestjs/swagger'
-import { ResOp } from '@/commom/model/response.model'
+import { ResOp } from '@/common/model/response.model'
 
 const baseTypeNames = ['String', 'Number', 'Boolean']
 

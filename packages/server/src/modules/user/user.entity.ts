@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 16:26:23
- * @LastEditTime: 2024-06-12 10:16:26
+ * @LastEditTime: 2024-06-13 16:54:31
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\user\user.entity.ts
  */
@@ -15,15 +15,15 @@ import {
   ManyToMany,
   ManyToOne,
   OneToMany,
-  Relation
+  Relation,
 } from 'typeorm'
 
-import { CommonEntity } from '@/commom/entity/common.entity'
+import { CommonEntity } from '@/common/entity/common.entity'
 
 import { AccessTokenEntity } from '@/modules/auth/entities/access-token.entity'
 
-// import { DeptEntity } from '@/modules/system/dept/dept.entity'
-// import { RoleEntity } from '@/modules/system/role/role.entity'
+import { DeptEntity } from '@/modules/system/dept/dept.entity'
+import { RoleEntity } from '@/modules/system/role/role.entity'
 
 @Entity({ name: 'sys_user' })
 export class UserEntity extends CommonEntity {
@@ -58,20 +58,20 @@ export class UserEntity extends CommonEntity {
   @Column({ type: 'tinyint', nullable: true, default: 1 })
   status: number
 
-  // @ManyToMany(() => RoleEntity, (role) => role.users)
-  // @JoinTable({
-  //   name: 'sys_user_roles',
-  //   joinColumn: { name: 'user_id', referencedColumnName: 'id' },
-  //   inverseJoinColumn: { name: 'role_id', referencedColumnName: 'id' }
-  // })
-  // roles: Relation<RoleEntity[]>
+  @ManyToMany(() => RoleEntity, role => role.users)
+  @JoinTable({
+    name: 'sys_user_roles',
+    joinColumn: { name: 'user_id', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'role_id', referencedColumnName: 'id' },
+  })
+  roles: Relation<RoleEntity[]>
 
-  // @ManyToOne(() => DeptEntity, (dept) => dept.users)
+  // @ManyToOne(() => DeptEntity, dept => dept.users)
   // @JoinColumn({ name: 'dept_id' })
   // dept: Relation<DeptEntity>
 
-  @OneToMany(() => AccessTokenEntity, (accessToken) => accessToken.user, {
-    cascade: true
+  @OneToMany(() => AccessTokenEntity, accessToken => accessToken.user, {
+    cascade: true,
   })
   accessTokens: Relation<AccessTokenEntity[]>
 }
