@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-13 17:42:22
+ * @LastEditTime: 2024-06-14 09:00:30
  */
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'

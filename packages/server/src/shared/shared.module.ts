@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-06-05 11:06:05
- * @LastEditTime: 2024-06-13 15:35:15
+ * @LastEditTime: 2024-06-14 09:19:21
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\shared\shared.module.ts
  */
@@ -27,6 +27,8 @@ import { RedisModule } from './redis/redis.module'
     LoggerModule.forRoot(),
     // http
     HttpModule,
+     // redis
+    RedisModule,
     // schedule
     ScheduleModule.forRoot(),
     // rate limit
@@ -45,8 +47,7 @@ import { RedisModule } from './redis/redis.module'
       verboseMemoryLeak: isDev,
       ignoreErrors: false,
     }),
-    // redis
-    RedisModule,
+   
     // mailer
     // MailerModule,
     // helper
@@ -57,3 +58,5 @@ import { RedisModule } from './redis/redis.module'
   exports: [HttpModule,  RedisModule],
 })
 export class SharedModule {}
+
+console.log( RedisModule)

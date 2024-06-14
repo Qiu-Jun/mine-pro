@@ -33,10 +33,8 @@ import { AccountInfo } from './user.model'
 @Injectable()
 export class UserService {
   constructor(
-    // @InjectRedis()
-    // private readonly redis: Redis,
-    @InjectRepository(UserEntity)
-    private readonly userRepository: Repository<UserEntity>,
+    @InjectRedis() private readonly redis: Redis,
+    @InjectRepository(UserEntity) private readonly userRepository: Repository<UserEntity>,
     @InjectRepository(RoleEntity)
     private readonly roleRepository: Repository<RoleEntity>,
     @InjectEntityManager() private entityManager: EntityManager,

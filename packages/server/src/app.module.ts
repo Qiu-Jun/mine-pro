@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-13 17:35:29
+ * @LastEditTime: 2024-06-14 09:30:58
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { ClassSerializerInterceptor, Module } from '@nestjs/common'
@@ -13,10 +13,9 @@ import { ThrottlerGuard, ThrottlerModule, seconds } from '@nestjs/throttler'
 import config from '@/config'
 import { join } from 'path'
 
-import { SharedModule } from '@/shared/shared.module'
 import { DatabaseModule } from '@/shared/database/database.module'
-
 import { SystemModule } from '@/modules/system/system.module'
+import { SharedModule } from '@/shared/shared.module'
 
 const rootPath = process.cwd()
 @Module({

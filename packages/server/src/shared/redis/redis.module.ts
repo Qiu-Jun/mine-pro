@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-06-13 15:04:37
- * @LastEditTime: 2024-06-13 17:18:10
+ * @LastEditTime: 2024-06-14 09:14:06
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\shared\redis\redis.module.ts
  */
@@ -40,6 +40,7 @@ const providers: Provider[] = [
     // cache
     CacheModule.registerAsync({
       imports: [ConfigModule],
+      inject: [ConfigService], 
       useFactory: (configService: ConfigService<ConfigKeyPaths>) => {
         const redisOptions: RedisOptions = configService.get<IRedisConfig>('redis')
 
@@ -50,20 +51,15 @@ const providers: Provider[] = [
           ...redisOptions,
         }
       },
-      inject: [ConfigService],
     }),
     // redis
     NestRedisModule.forRootAsync({
       imports: [ConfigModule],
-      useFactory: (configService: ConfigService<ConfigKeyPaths>) => {
-        console.log('============================================================================')
-        console.log(configService.get<IRedisConfig>('redis'))
-        return {
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService<ConfigKeyPaths>) => ({
           readyLog: true,
           config: configService.get<IRedisConfig>('redis'),
-        }
-      },
-      inject: [ConfigService],
+        }),
     }),
   ],
   providers,
