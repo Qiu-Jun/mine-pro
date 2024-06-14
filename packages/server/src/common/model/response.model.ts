@@ -2,9 +2,9 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 08:50:10
- * @LastEditTime: 2024-06-05 08:57:07
+ * @LastEditTime: 2024-06-14 11:42:11
  * @LastEditors: June
- * @FilePath: \mine-pro\packages\server\src\commom\model\response.model.ts
+ * @FilePath: \mine-pro\packages\server\src\common\model\response.model.ts
  */
 import { ApiProperty } from '@nestjs/swagger'
 

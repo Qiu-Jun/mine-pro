@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-14 10:47:07
+ * @LastEditTime: 2024-06-14 10:57:13
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { ClassSerializerInterceptor, Module } from '@nestjs/common'
@@ -12,6 +12,8 @@ import { ConfigModule } from '@nestjs/config'
 import { ThrottlerGuard, ThrottlerModule, seconds } from '@nestjs/throttler'
 import config from '@/config'
 import { join } from 'path'
+
+import { TransformInterceptor } from './common/interceptors/transform.interceptor'
 
 import { DatabaseModule } from '@/shared/database/database.module'
 import { SystemModule } from '@/modules/system/system.module'
@@ -48,6 +50,7 @@ const rootPath = process.cwd()
   ],
 
   providers: [
+    { provide: APP_INTERCEPTOR, useClass: TransformInterceptor },
     { provide: APP_GUARD, useClass: ThrottlerGuard },
     { provide: APP_INTERCEPTOR, useClass: ClassSerializerInterceptor }, 
   ]

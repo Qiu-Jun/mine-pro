@@ -2,9 +2,9 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 17:10:56
- * @LastEditTime: 2024-06-05 17:11:41
+ * @LastEditTime: 2024-06-14 11:39:48
  * @LastEditors: June
- * @FilePath: \mine-pro\packages\server\src\commom\exceptions\biz.exception.ts
+ * @FilePath: \mine-pro\packages\server\src\common\exceptions\biz.exception.ts
  */
 import { HttpException, HttpStatus } from '@nestjs/common'
 
