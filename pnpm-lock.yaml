@@ -345,6 +345,9 @@ importers:
       rxjs:
         specifier: ^7.8.1
         version: 7.8.1
+      systeminformation:
+        specifier: ^5.22.11
+        version: 5.22.11
       typeorm:
         specifier: ^0.3.20
         version: 0.3.20(ioredis@5.4.1)(mysql2@3.10.0)(ts-node@10.9.2(@types/node@20.12.12)(typescript@5.3.3))
@@ -8162,6 +8165,12 @@ packages:
   synckit@0.8.8:
     resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
+
+  systeminformation@5.22.11:
+    resolution: {integrity: sha512-aLws5yi4KCHTb0BVvbodQY5bY8eW4asMRDTxTW46hqw9lGjACX6TlLdJrkdoHYRB0qs+MekqEq1zG7WDnWE8Ug==}
+    engines: {node: '>=8.0.0'}
+    os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos, android]
+    hasBin: true
 
   systemjs@6.15.1:
     resolution: {integrity: sha512-Nk8c4lXvMB98MtbmjX7JwJRgJOL8fluecYCfCeYBznwmpOs8Bf15hLM6z4z71EDAhQVrQrI+wt1aLWSXZq+hXA==}
@@ -18884,6 +18893,8 @@ snapshots:
     dependencies:
       '@pkgr/core': 0.1.1
       tslib: 2.6.2
+
+  systeminformation@5.22.11: {}
 
   systemjs@6.15.1: {}
 

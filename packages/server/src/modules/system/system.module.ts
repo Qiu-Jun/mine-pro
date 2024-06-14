@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 17:27:00
- * @LastEditTime: 2024-06-13 17:22:00
+ * @LastEditTime: 2024-06-14 10:19:14
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\system.module.ts
  */
@@ -18,7 +18,7 @@ import { MenuModule } from './menu/menu.module'
 // import { OnlineModule } from './online/online.module'
 import { ParamConfigModule } from './param-config/param-config.module'
 import { RoleModule } from './role/role.module'
-// import { ServeModule } from './serve/serve.module'
+import { ServeModule } from './serve/serve.module'
 // import { TaskModule } from './task/task.module'
 
 const modules = [
@@ -33,7 +33,7 @@ const modules = [
   //   LogModule,
   //   TaskModule,
   //   OnlineModule,
-  //   ServeModule
+  ServeModule
 ]
 
 @Module({

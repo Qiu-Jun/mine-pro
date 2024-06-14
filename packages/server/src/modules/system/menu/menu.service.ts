@@ -22,7 +22,7 @@ import { MenuDto, MenuQueryDto, MenuUpdateDto } from './menu.dto'
 @Injectable()
 export class MenuService {
   constructor(
-    // @InjectRedis() private redis: Redis,
+    @InjectRedis() private redis: Redis,
     @InjectRepository(MenuEntity)
     private menuRepository: Repository<MenuEntity>,
     private roleService: RoleService,
@@ -214,35 +214,35 @@ export class MenuService {
    */
   async refreshPerms(uid: number): Promise<void> {
     const perms = await this.getPermissions(uid)
-    // const online = await this.redis.get(genAuthTokenKey(uid))
-    // if (online) {
-    //   // 判断是否在线
-    //   await this.redis.set(genAuthPermKey(uid), JSON.stringify(perms))
-    //   console.log('refreshPerms')
+    const online = await this.redis.get(genAuthTokenKey(uid))
+    if (online) {
+      // 判断是否在线
+      await this.redis.set(genAuthPermKey(uid), JSON.stringify(perms))
+      console.log('refreshPerms')
 
-    //   // this.sseService.noticeClientToUpdateMenusByUserIds([uid])
-    // }
+      // this.sseService.noticeClientToUpdateMenusByUserIds([uid])
+    }
   }
 
   /**
    * 刷新所有在线用户的权限
    */
   async refreshOnlineUserPerms(isNoticeUser = true): Promise<void> {
-    // const onlineUserIds: string[] = await this.redis.keys(genAuthTokenKey('*'))
-    // if (onlineUserIds && onlineUserIds.length > 0) {
-    //   const promiseArr = onlineUserIds
-    //     .map(i => Number.parseInt(i.split(RedisKeys.AUTH_TOKEN_PREFIX)[1]))
-    //     .filter(i => i)
-    //     .map(async (uid) => {
-    //       const perms = await this.getPermissions(uid)
-    //       await this.redis.set(genAuthPermKey(uid), JSON.stringify(perms))
-    //       return uid
-    //     })
-    //   const uids = await Promise.all(promiseArr)
-    //   console.log('refreshOnlineUserPerms')
-    //   // if (isNoticeUser)
-    //   //   this.sseService.noticeClientToUpdateMenusByUserIds(uids)
-    // }
+    const onlineUserIds: string[] = await this.redis.keys(genAuthTokenKey('*'))
+    if (onlineUserIds && onlineUserIds.length > 0) {
+      const promiseArr = onlineUserIds
+        .map(i => Number.parseInt(i.split(RedisKeys.AUTH_TOKEN_PREFIX)[1]))
+        .filter(i => i)
+        .map(async (uid) => {
+          const perms = await this.getPermissions(uid)
+          await this.redis.set(genAuthPermKey(uid), JSON.stringify(perms))
+          return uid
+        })
+      const uids = await Promise.all(promiseArr)
+      console.log('refreshOnlineUserPerms')
+      // if (isNoticeUser)
+      //   this.sseService.noticeClientToUpdateMenusByUserIds(uids)
+    }
   }
 
   /**

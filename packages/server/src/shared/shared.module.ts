@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-06-05 11:06:05
- * @LastEditTime: 2024-06-14 09:19:21
+ * @LastEditTime: 2024-06-14 10:19:49
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\shared\shared.module.ts
  */
@@ -58,5 +58,3 @@ import { RedisModule } from './redis/redis.module'
   exports: [HttpModule,  RedisModule],
 })
 export class SharedModule {}
-
-console.log( RedisModule)
