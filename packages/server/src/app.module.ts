@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-14 10:57:13
+ * @LastEditTime: 2024-06-14 15:38:26
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { ClassSerializerInterceptor, Module } from '@nestjs/common'
@@ -18,6 +18,7 @@ import { TransformInterceptor } from './common/interceptors/transform.intercepto
 import { DatabaseModule } from '@/shared/database/database.module'
 import { SystemModule } from '@/modules/system/system.module'
 import { HealthModule } from '@/modules/health/health.module'
+import { CommonModule } from '@/modules/common/common.module'
 
 import { SharedModule } from '@/shared/shared.module'
 
@@ -46,7 +47,8 @@ const rootPath = process.cwd()
     DatabaseModule,
 
     HealthModule,
-    SystemModule
+    SystemModule,
+    CommonModule
   ],
 
   providers: [

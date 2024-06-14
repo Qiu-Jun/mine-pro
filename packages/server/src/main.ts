@@ -3,13 +3,13 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-14 09:00:30
+ * @LastEditTime: 2024-06-14 16:35:44
  */
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
 import { AppModule } from './app.module'
 import {
-  FastifyAdapter,
+
   NestFastifyApplication
 } from '@nestjs/platform-fastify'
 import { useContainer } from 'class-validator'
@@ -19,7 +19,7 @@ import HttpFilter from '@/common/errorHandle'
 import { setupSwagger } from './app.swagger'
 import { isDev } from './global/env'
 import { LoggerService } from './shared/logger/logger.service'
-
+import { fastifyApp } from '@/common/adapters/fastify.adapter'
 import type { ConfigKeyPaths } from './config'
 
 declare const module: any
@@ -27,7 +27,12 @@ declare const module: any
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter()
+    fastifyApp,
+     {
+      bufferLogs: true,
+      snapshot: true,
+      // forceCloseConnections: true,
+    },
   )
 
   const configService = app.get(ConfigService<ConfigKeyPaths>)
@@ -44,7 +49,6 @@ async function bootstrap() {
     // root: join(__dirname, '..', 'static'), // 静态资源目录
     // prefix: '/static' // 访问静态资源的URL前缀
   })
-
   // 这是express的静态资源配置
   // app.useStaticAssets(join(__dirname, '..', 'static'), {
   //   prefix: '/static'
