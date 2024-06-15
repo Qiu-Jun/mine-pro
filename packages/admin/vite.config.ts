@@ -12,6 +12,7 @@ import dayjs from 'dayjs'
 // import mockServerPlugin from '@minepro/vite-plugin-msw/vite'
 // import TinymceResourcePlugin from '@minepro/vite-plugin-tinymce-resource'
 // import Http2Proxy from '@minepro/vite-plugin-http2-proxy'
+//@ts-ignore
 import pkg from './package.json'
 import type { UserConfig, ConfigEnv } from 'vite'
 
