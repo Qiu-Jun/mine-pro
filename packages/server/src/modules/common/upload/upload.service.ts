@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-06-14 15:21:57
- * @LastEditTime: 2024-06-14 15:36:51
+ * @LastEditTime: 2024-06-15 17:05:25
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\common\upload\upload.service.ts
  */
@@ -34,7 +34,7 @@ export class UploadService {
   /**
    * 保存文件上传记录
    */
-  async saveFile(file: MultipartFile, userId?: number): Promise<string> {
+  async saveFile(file: MultipartFile, userId: number): Promise<string> {
     if (isNil(file))
       throw new NotFoundException('Have not any file to upload!')
 
@@ -55,7 +55,7 @@ export class UploadService {
       path,
       type,
       size,
-      // userId,
+      userId,
     })
 
     return path

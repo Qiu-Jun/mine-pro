@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-06-05 11:06:05
- * @LastEditTime: 2024-06-14 10:19:49
+ * @LastEditTime: 2024-06-15 17:11:07
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\shared\shared.module.ts
  */
@@ -14,9 +14,9 @@ import { ThrottlerModule } from '@nestjs/throttler'
 
 import { isDev } from '@/global/env'
 
-// import { HelperModule } from './helper/helper.module'
+import { HelperModule } from './helper/helper.module'
 import { LoggerModule } from './logger/logger.module'
-// import { MailerModule } from './mailer/mailer.module'
+import { MailerModule } from './mailer/mailer.module'
 
 import { RedisModule } from './redis/redis.module'
 
@@ -49,12 +49,11 @@ import { RedisModule } from './redis/redis.module'
     }),
    
     // mailer
-    // MailerModule,
+    MailerModule,
     // helper
-    // HelperModule,
+    HelperModule,
   ],
 
-  // MailerModule, HelperModule
-  exports: [HttpModule,  RedisModule],
+  exports: [HttpModule,  RedisModule, MailerModule, HelperModule],
 })
 export class SharedModule {}

@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-06-14 15:20:25
- * @LastEditTime: 2024-06-14 16:40:54
+ * @LastEditTime: 2024-06-15 16:46:01
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\common\upload\upload.controller.ts
  */
@@ -11,7 +11,7 @@ import { ApiBody, ApiConsumes, ApiOperation, ApiTags } from '@nestjs/swagger'
 import { FastifyRequest } from 'fastify'
 
 import { ApiSecurityAuth } from '@/common/decorators/swagger.decorator'
-// import { AuthUser } from '@/modules/auth/decorators/auth-user.decorator'
+import { AuthUser } from '@/modules/auth/decorators/auth-user.decorator'
 
 import { Perm, definePermission } from '@/modules/auth/decorators/permission.decorator'
 
@@ -35,8 +35,8 @@ export class UploadController {
   @ApiBody({
     type: FileUploadDto,
   })
-    //   @AuthUser() user: IAuthUser
-  async upload(@Req() req: FastifyRequest,) {
+  
+  async upload(@Req() req: FastifyRequest, @AuthUser() user: IAuthUser) {
 
     if (!req.isMultipart())
       throw new BadRequestException('Request is not multipart')
@@ -47,8 +47,7 @@ export class UploadController {
     //   console.log(part.file)
 
     try {
-      // user.uid
-      const path = await this.uploadService.saveFile(file, )
+      const path = await this.uploadService.saveFile(file, user.uid)
 
       return {
         filename: path,
