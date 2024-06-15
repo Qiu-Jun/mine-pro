@@ -7,7 +7,7 @@ import UAParser from 'ua-parser-js'
 
 import { paginateRaw } from '@/helper/paginate'
 
-import { getIpAddress } from '@/utils/ip.util'
+import { getIpAddress } from '@/utils/'
 
 import { LoginLogQueryDto } from '../dto/log.dto'
 import { LoginLogEntity } from '../entities/login-log.entity'
