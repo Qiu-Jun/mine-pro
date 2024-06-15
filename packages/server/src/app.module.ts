@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-15 13:58:00
+ * @LastEditTime: 2024-06-15 14:33:29
  * @FilePath: \mine-pro\packages\server\src\app.module.ts
  */
 import { ClassSerializerInterceptor, Module } from '@nestjs/common'
@@ -21,7 +21,7 @@ import { SystemModule } from '@/modules/system/system.module'
 import { HealthModule } from '@/modules/health/health.module'
 import { CommonModule } from '@/modules/common/common.module'
 import { AuthModule } from '@/modules/auth/auth.module'
-
+import { NetdiskModule } from '@/modules/netdisk/netdisk.module'
 import { SharedModule } from '@/shared/shared.module'
 
 const rootPath = process.cwd()
@@ -51,13 +51,14 @@ const rootPath = process.cwd()
     AuthModule,
     HealthModule,
     SystemModule,
-    CommonModule
+    CommonModule,
+    NetdiskModule
   ],
 
   providers: [
     { provide: APP_INTERCEPTOR, useClass: TransformInterceptor },
     { provide: APP_INTERCEPTOR, useClass: ClassSerializerInterceptor },
-    
+
     { provide: APP_GUARD, useClass: JwtAuthGuard },
     { provide: APP_GUARD, useClass: ThrottlerGuard },
   ]
