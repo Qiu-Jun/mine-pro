@@ -1,3 +1,11 @@
+/*
+ * @Author: June
+ * @Description: 
+ * @Date: 2024-05-27 16:25:57
+ * @LastEditTime: 2024-06-15 16:10:05
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\admin\src\api\backend\api\systemEmail.ts
+ */
 // @ts-ignore
 /* eslint-disable */
 
@@ -7,9 +15,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 发送邮件 POST /api/tools/email/send */
+/** 发送邮件 POST /api/common/email/send */
 export async function emailSend(body: API.EmailSendDto, options?: RequestOptions) {
-  return request<any>('/api/tools/email/send', {
+  return request<any>('/api/common/email/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

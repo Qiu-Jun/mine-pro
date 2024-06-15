@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 16:26:23
- * @LastEditTime: 2024-06-13 16:54:31
+ * @LastEditTime: 2024-06-15 15:47:51
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\user\user.entity.ts
  */
@@ -66,9 +66,9 @@ export class UserEntity extends CommonEntity {
   })
   roles: Relation<RoleEntity[]>
 
-  // @ManyToOne(() => DeptEntity, dept => dept.users)
-  // @JoinColumn({ name: 'dept_id' })
-  // dept: Relation<DeptEntity>
+  @ManyToOne(() => DeptEntity, dept => dept.users)
+  @JoinColumn({ name: 'dept_id' })
+  dept: Relation<DeptEntity>
 
   @OneToMany(() => AccessTokenEntity, accessToken => accessToken.user, {
     cascade: true,

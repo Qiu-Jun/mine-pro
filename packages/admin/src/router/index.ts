@@ -28,8 +28,5 @@ export async function setupRouter(app: App) {
   createRouterGuards(router, whiteNameList);
 
   app.use(router);
-
-  // 路由准备就绪后挂载APP实例
-  await router.isReady();
 }
 export default router;

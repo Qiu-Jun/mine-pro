@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-14 16:35:44
+ * @LastEditTime: 2024-06-15 15:17:19
  */
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
@@ -42,6 +42,7 @@ async function bootstrap() {
   app.enableVersioning({
     type: VersioningType.URI
   })
+  app.setGlobalPrefix(globalPrefix)
   app.useStaticAssets( {
     // 暂用  后面改回static
     root: join(__dirname, '..', 'uploads'), // 静态资源目录

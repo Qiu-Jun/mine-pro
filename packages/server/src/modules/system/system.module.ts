@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 17:27:00
- * @LastEditTime: 2024-06-14 10:19:14
+ * @LastEditTime: 2024-06-15 16:02:08
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\system.module.ts
  */
@@ -10,12 +10,12 @@ import { Module } from '@nestjs/common'
 import { RouterModule } from '@nestjs/core'
 import { UserModule } from '../user/user.module'
 
-// import { DeptModule } from './dept/dept.module'
-// import { DictItemModule } from './dict-item/dict-item.module'
-// import { DictTypeModule } from './dict-type/dict-type.module'
-// import { LogModule } from './log/log.module'
+import { DeptModule } from './dept/dept.module'
+import { DictItemModule } from './dict-item/dict-item.module'
+import { DictTypeModule } from './dict-type/dict-type.module'
+import { LogModule } from './log/log.module'
 import { MenuModule } from './menu/menu.module'
-// import { OnlineModule } from './online/online.module'
+import { OnlineModule } from './online/online.module'
 import { ParamConfigModule } from './param-config/param-config.module'
 import { RoleModule } from './role/role.module'
 import { ServeModule } from './serve/serve.module'
@@ -24,15 +24,14 @@ import { ServeModule } from './serve/serve.module'
 const modules = [
   UserModule,
   RoleModule,
-
   MenuModule,
-  //   DeptModule,
-  //   DictTypeModule,
-  //   DictItemModule,
+  DeptModule,
+  DictTypeModule,
+  DictItemModule,
   ParamConfigModule,
-  //   LogModule,
-  //   TaskModule,
-  //   OnlineModule,
+  LogModule,
+  // TaskModule,
+  OnlineModule,
   ServeModule
 ]
 

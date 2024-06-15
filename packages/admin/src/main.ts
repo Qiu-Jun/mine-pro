@@ -3,21 +3,21 @@
  * @Description:
  * @Date: 2024-05-26 09:09:39
  * @LastEditors: June
- * @LastEditTime: 2024-05-26 09:35:52
- * @FilePath: /mine-pro/packages/admin/src/main.ts
+ * @LastEditTime: 2024-06-15 14:41:02
+ * @FilePath: \mine-pro\packages\admin\src\main.ts
  */
 import './polyfill'
 import { createApp } from 'vue'
 import App from './App.vue'
-import { setupRouter } from './router'
+import { router, setupRouter } from './router'
 import { setupIcons } from './components/basic/icon'
 import { setupStore } from '@/store'
 import { setupI18n } from '@/locales'
 import { setupAntd, setupAssets, setupGlobalMethods } from '@/plugins'
 
-const app = createApp(App)
 
-function setupPlugins() {
+async function bootstrap() {
+  const app = createApp(App)
   // 安装图标
   setupIcons()
   // 注册全局常用的ant-design-vue组件
@@ -26,11 +26,9 @@ function setupPlugins() {
   setupAssets()
   // 注册全局方法，如：app.config.globalProperties.$message = message
   setupGlobalMethods(app)
-}
 
-async function setupApp() {
-  // 通过动态import可生成单独的chunk，结合全局替换变量，可实现按需加载，且不会对代码打包体积造成影响
-  // if (import.meta.env.VITE_MOCK_IN_PROD === 'true') {
+   // 通过动态import可生成单独的chunk，结合全局替换变量，可实现按需加载，且不会对代码打包体积造成影响
+   // if (import.meta.env.VITE_MOCK_IN_PROD === 'true') {
   //   const { setupMock } = await import('../mocks/');
   //   // 启用 mock
   //   await setupMock();
@@ -44,9 +42,9 @@ async function setupApp() {
   // 挂载路由
   await setupRouter(app)
 
+  // 路由准备就绪后挂载APP实例
+  await router.isReady();
+
   app.mount('#app')
 }
-
-setupPlugins()
-
-setupApp()
+bootstrap()

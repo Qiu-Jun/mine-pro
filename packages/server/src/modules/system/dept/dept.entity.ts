@@ -2,7 +2,7 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 16:46:59
- * @LastEditTime: 2024-06-13 14:31:04
+ * @LastEditTime: 2024-06-15 15:45:39
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\dept\dept.entity.ts
  */
@@ -14,7 +14,7 @@ import {
   Relation,
   Tree,
   TreeChildren,
-  TreeParent
+  TreeParent,
 } from 'typeorm'
 
 import { CommonEntity } from '@/common/entity/common.entity'
@@ -38,7 +38,7 @@ export class DeptEntity extends CommonEntity {
   @TreeParent({ onDelete: 'SET NULL' })
   parent?: DeptEntity
 
-  // @ApiHideProperty()
-  // @OneToMany(() => UserEntity, (user) => user.dept)
-  // users: Relation<UserEntity[]>
+  @ApiHideProperty()
+  @OneToMany(() => UserEntity, user => user.dept)
+  users: Relation<UserEntity[]>
 }
