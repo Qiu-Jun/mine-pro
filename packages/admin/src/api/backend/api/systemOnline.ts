@@ -7,9 +7,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 下线指定在线用户 POST /api/system/online/kick */
+/** 下线指定在线用户 POST /system/online/kick */
 export async function onlineKick(body: API.KickDto, options?: RequestOptions) {
-  return request<any>('/api/system/online/kick', {
+  return request<any>('/system/online/kick', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -19,9 +19,9 @@ export async function onlineKick(body: API.KickDto, options?: RequestOptions) {
   });
 }
 
-/** 查询当前在线用户 GET /api/system/online/list */
+/** 查询当前在线用户 GET /system/online/list */
 export async function onlineList(options?: RequestOptions) {
-  return request<API.OnlineUserInfo[]>('/api/system/online/list', {
+  return request<API.OnlineUserInfo[]>('/system/online/list', {
     method: 'GET',
     ...(options || {}),
   });

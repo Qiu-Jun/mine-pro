@@ -1,9 +1,18 @@
+/*
+ * @Author: June
+ * @Description: 
+ * @Date: 2024-05-27 16:25:57
+ * @LastEditTime: 2024-06-17 09:58:54
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\admin\src\store\modules\sse.ts
+ */
 import { ref, watch } from 'vue';
 import { defineStore } from 'pinia';
 import { useIdle } from '@vueuse/core';
 import mitt from 'mitt';
 import { useUserStore } from './user';
 import { uniqueSlash } from '@/utils/urlUtils';
+import { globalEnv } from '@/constants/env';
 
 export type MessageEvent = {
   data?: any;
@@ -52,7 +61,7 @@ export const useSSEStore = defineStore('sse', () => {
     const uid = userStore.userInfo.id;
     if (!uid) return;
     const sseUrl = uniqueSlash(
-      `${import.meta.env.VITE_BASE_API_URL}/api/sse/${uid}?token=${userStore.token}`,
+      `${globalEnv.apiPrefix}/sse/${uid}?token=${userStore.token}`,
     );
 
     eventSource = new EventSource(sseUrl);

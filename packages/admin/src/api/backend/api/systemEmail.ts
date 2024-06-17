@@ -15,9 +15,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 发送邮件 POST /api/common/email/send */
+/** 发送邮件 POST /common/email/send */
 export async function emailSend(body: API.EmailSendDto, options?: RequestOptions) {
-  return request<any>('/api/common/email/send', {
+  return request<any>('/common/email/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

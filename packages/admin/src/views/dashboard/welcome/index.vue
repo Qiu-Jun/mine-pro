@@ -1,6 +1,13 @@
+<!--
+ * @Author: June
+ * @Description: 
+ * @Date: 2024-05-27 16:25:57
+ * @LastEditTime: 2024-06-17 08:54:22
+ * @LastEditors: June
+ * @FilePath: \mine-pro\packages\admin\src\views\dashboard\welcome\index.vue
+-->
 <template>
   <div class="box">
-    <img src="~@/assets/analysis.svg" />
     <Descriptions title="系统信息" bordered>
       <Descriptions.Item key="IP" label="IP">
         {{ loginIp }}

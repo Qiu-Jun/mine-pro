@@ -7,9 +7,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 获取服务器运行信息 GET /api/system/serve/stat */
+/** 获取服务器运行信息 GET /system/serve/stat */
 export async function serveStat(options?: RequestOptions) {
-  return request<API.ServeStatInfo>('/api/system/serve/stat', {
+  return request<API.ServeStatInfo>('/system/serve/stat', {
     method: 'GET',
     ...(options || {}),
   });

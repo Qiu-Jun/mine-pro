@@ -11,8 +11,6 @@ interface ImportMetaEnv {
   readonly VITE_BASE_SOCKET_PATH: string;
   /** socket 命名空间 */
   readonly VITE_BASE_SOCKET_NSP: string;
-  /** mock API 路径 */
-  readonly VITE_MOCK_API: string;
   // 更多环境变量...
 }
 

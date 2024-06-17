@@ -7,9 +7,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 获取用户列表 GET /api/system/users */
+/** 获取用户列表 GET /system/users */
 export async function userList(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.UserListParams,
   options?: RequestOptions,
 ) {
@@ -22,7 +22,7 @@ export async function userList(
       totalPages?: number;
       currentPage?: number;
     };
-  }>('/api/system/users', {
+  }>('/system/users', {
     method: 'GET',
     params: {
       ...params,
@@ -31,9 +31,9 @@ export async function userList(
   });
 }
 
-/** 新增用户 POST /api/system/users */
+/** 新增用户 POST /system/users */
 export async function userCreate(body: API.UserDto, options?: RequestOptions) {
-  return request<any>('/api/system/users', {
+  return request<any>('/system/users', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,29 +43,29 @@ export async function userCreate(body: API.UserDto, options?: RequestOptions) {
   });
 }
 
-/** 查询用户 GET /api/system/users/${param0} */
+/** 查询用户 GET /system/users/${param0} */
 export async function userRead(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.UserReadParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<API.UserEntity>(`/api/system/users/${param0}`, {
+  return request<API.UserEntity>(`/system/users/${param0}`, {
     method: 'GET',
     params: { ...queryParams },
     ...(options || {}),
   });
 }
 
-/** 更新用户 PUT /api/system/users/${param0} */
+/** 更新用户 PUT /system/users/${param0} */
 export async function userUpdate(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.UserUpdateParams,
   body: API.UserUpdateDto,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/users/${param0}`, {
+  return request<any>(`/system/users/${param0}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -76,29 +76,29 @@ export async function userUpdate(
   });
 }
 
-/** 删除用户 DELETE /api/system/users/${param0} */
+/** 删除用户 DELETE /system/users/${param0} */
 export async function userDelete(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.UserDeleteParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/users/${param0}`, {
+  return request<any>(`/system/users/${param0}`, {
     method: 'DELETE',
     params: { ...queryParams },
     ...(options || { successMsg: '删除成功' }),
   });
 }
 
-/** 更改用户密码 POST /api/system/users/${param0}/password */
+/** 更改用户密码 POST /system/users/${param0}/password */
 export async function userPassword(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.UserPasswordParams,
   body: API.UserPasswordDto,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/users/${param0}/password`, {
+  return request<any>(`/system/users/${param0}/password`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

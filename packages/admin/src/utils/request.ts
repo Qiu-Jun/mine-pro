@@ -6,7 +6,7 @@ import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { ResultEnum } from '@/enums/httpEnum';
 import { useUserStore } from '@/store/modules/user';
 import { useSSEStore } from '@/store/modules/sse';
-
+import { globalEnv } from '@/constants/env';
 export interface RequestOptions extends AxiosRequestConfig {
   /** 是否直接将数据从响应中提取出，例如直接返回 res.data，而忽略 res.code 等信息 */
   isReturnResult?: boolean;
@@ -24,7 +24,7 @@ export interface RequestOptions extends AxiosRequestConfig {
 const UNKNOWN_ERROR = '未知错误，请重试';
 
 /** 真实请求的路径前缀 */
-export const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
+export const baseApiUrl = globalEnv.apiPrefix;
 /** mock请求路径前缀 */
 // const baseMockUrl = import.meta.env.VITE_MOCK_API;
 

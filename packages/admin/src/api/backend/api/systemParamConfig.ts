@@ -7,9 +7,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 获取参数配置列表 GET /api/system/param-config */
+/** 获取参数配置列表 GET /system/param-config */
 export async function paramConfigList(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.ParamConfigListParams,
   options?: RequestOptions,
 ) {
@@ -22,7 +22,7 @@ export async function paramConfigList(
       totalPages?: number;
       currentPage?: number;
     };
-  }>('/api/system/param-config', {
+  }>('/system/param-config', {
     method: 'GET',
     params: {
       ...params,
@@ -31,9 +31,9 @@ export async function paramConfigList(
   });
 }
 
-/** 新增参数配置 POST /api/system/param-config */
+/** 新增参数配置 POST /system/param-config */
 export async function paramConfigCreate(body: API.ParamConfigDto, options?: RequestOptions) {
-  return request<any>('/api/system/param-config', {
+  return request<any>('/system/param-config', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,29 +43,29 @@ export async function paramConfigCreate(body: API.ParamConfigDto, options?: Requ
   });
 }
 
-/** 查询参数配置信息 GET /api/system/param-config/${param0} */
+/** 查询参数配置信息 GET /system/param-config/${param0} */
 export async function paramConfigInfo(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.ParamConfigInfoParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<API.ParamConfigEntity>(`/api/system/param-config/${param0}`, {
+  return request<API.ParamConfigEntity>(`/system/param-config/${param0}`, {
     method: 'GET',
     params: { ...queryParams },
     ...(options || {}),
   });
 }
 
-/** 更新参数配置 POST /api/system/param-config/${param0} */
+/** 更新参数配置 POST /system/param-config/${param0} */
 export async function paramConfigUpdate(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.ParamConfigUpdateParams,
   body: API.ParamConfigDto,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/param-config/${param0}`, {
+  return request<any>(`/system/param-config/${param0}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -76,14 +76,14 @@ export async function paramConfigUpdate(
   });
 }
 
-/** 删除指定的参数配置 DELETE /api/system/param-config/${param0} */
+/** 删除指定的参数配置 DELETE /system/param-config/${param0} */
 export async function paramConfigDelete(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.ParamConfigDeleteParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/param-config/${param0}`, {
+  return request<any>(`/system/param-config/${param0}`, {
     method: 'DELETE',
     params: { ...queryParams },
     ...(options || { successMsg: '删除成功' }),

@@ -7,9 +7,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 获取任务列表 GET /api/system/tasks */
+/** 获取任务列表 GET /system/tasks */
 export async function taskList(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskListParams,
   options?: RequestOptions,
 ) {
@@ -22,7 +22,7 @@ export async function taskList(
       totalPages?: number;
       currentPage?: number;
     };
-  }>('/api/system/tasks', {
+  }>('/system/tasks', {
     method: 'GET',
     params: {
       ...params,
@@ -31,9 +31,9 @@ export async function taskList(
   });
 }
 
-/** 添加任务 POST /api/system/tasks */
+/** 添加任务 POST /system/tasks */
 export async function taskCreate(body: API.TaskDto, options?: RequestOptions) {
-  return request<any>('/api/system/tasks', {
+  return request<any>('/system/tasks', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,29 +43,29 @@ export async function taskCreate(body: API.TaskDto, options?: RequestOptions) {
   });
 }
 
-/** 查询任务详细信息 GET /api/system/tasks/${param0} */
+/** 查询任务详细信息 GET /system/tasks/${param0} */
 export async function taskInfo(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskInfoParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<API.TaskEntity>(`/api/system/tasks/${param0}`, {
+  return request<API.TaskEntity>(`/system/tasks/${param0}`, {
     method: 'GET',
     params: { ...queryParams },
     ...(options || {}),
   });
 }
 
-/** 更新任务 PUT /api/system/tasks/${param0} */
+/** 更新任务 PUT /system/tasks/${param0} */
 export async function taskUpdate(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskUpdateParams,
   body: API.TaskUpdateDto,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/tasks/${param0}`, {
+  return request<any>(`/system/tasks/${param0}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -76,56 +76,56 @@ export async function taskUpdate(
   });
 }
 
-/** 删除任务 DELETE /api/system/tasks/${param0} */
+/** 删除任务 DELETE /system/tasks/${param0} */
 export async function taskDelete(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskDeleteParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/tasks/${param0}`, {
+  return request<any>(`/system/tasks/${param0}`, {
     method: 'DELETE',
     params: { ...queryParams },
     ...(options || { successMsg: '删除成功' }),
   });
 }
 
-/** 手动执行一次任务 PUT /api/system/tasks/${param0}/once */
+/** 手动执行一次任务 PUT /system/tasks/${param0}/once */
 export async function taskOnce(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskOnceParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/tasks/${param0}/once`, {
+  return request<any>(`/system/tasks/${param0}/once`, {
     method: 'PUT',
     params: { ...queryParams },
     ...(options || {}),
   });
 }
 
-/** 启动任务 PUT /api/system/tasks/${param0}/start */
+/** 启动任务 PUT /system/tasks/${param0}/start */
 export async function taskStart(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskStartParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/tasks/${param0}/start`, {
+  return request<any>(`/system/tasks/${param0}/start`, {
     method: 'PUT',
     params: { ...queryParams },
     ...(options || {}),
   });
 }
 
-/** 停止任务 PUT /api/system/tasks/${param0}/stop */
+/** 停止任务 PUT /system/tasks/${param0}/stop */
 export async function taskStop(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.TaskStopParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/tasks/${param0}/stop`, {
+  return request<any>(`/system/tasks/${param0}/stop`, {
     method: 'PUT',
     params: { ...queryParams },
     ...(options || {}),

@@ -7,7 +7,7 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 上传 POST /api/common/upload */
+/** 上传 POST /common/upload */
 export async function uploadUpload(body: API.FileUploadDto, file?: File, options?: RequestOptions) {
   const formData = new FormData();
 
@@ -31,7 +31,7 @@ export async function uploadUpload(body: API.FileUploadDto, file?: File, options
     }
   });
 
-  return request<any>('/api/common/upload', {
+  return request<any>('/common/upload', {
     method: 'POST',
     data: formData,
     requestType: 'form',

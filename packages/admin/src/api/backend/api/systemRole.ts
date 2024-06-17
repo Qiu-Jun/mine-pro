@@ -7,9 +7,9 @@
 
 import { request, type RequestOptions } from '@/utils/request';
 
-/** 获取角色列表 GET /api/system/roles */
+/** 获取角色列表 GET /system/roles */
 export async function roleList(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.RoleListParams,
   options?: RequestOptions,
 ) {
@@ -22,7 +22,7 @@ export async function roleList(
       totalPages?: number;
       currentPage?: number;
     };
-  }>('/api/system/roles', {
+  }>('/system/roles', {
     method: 'GET',
     params: {
       ...params,
@@ -31,9 +31,9 @@ export async function roleList(
   });
 }
 
-/** 新增角色 POST /api/system/roles */
+/** 新增角色 POST /system/roles */
 export async function roleCreate(body: API.RoleDto, options?: RequestOptions) {
-  return request<any>('/api/system/roles', {
+  return request<any>('/system/roles', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,29 +43,29 @@ export async function roleCreate(body: API.RoleDto, options?: RequestOptions) {
   });
 }
 
-/** 获取角色信息 GET /api/system/roles/${param0} */
+/** 获取角色信息 GET /system/roles/${param0} */
 export async function roleInfo(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.RoleInfoParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<API.RoleInfo>(`/api/system/roles/${param0}`, {
+  return request<API.RoleInfo>(`/system/roles/${param0}`, {
     method: 'GET',
     params: { ...queryParams },
     ...(options || {}),
   });
 }
 
-/** 更新角色 PUT /api/system/roles/${param0} */
+/** 更新角色 PUT /system/roles/${param0} */
 export async function roleUpdate(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.RoleUpdateParams,
   body: API.RoleUpdateDto,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/roles/${param0}`, {
+  return request<any>(`/system/roles/${param0}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -76,14 +76,14 @@ export async function roleUpdate(
   });
 }
 
-/** 删除角色 DELETE /api/system/roles/${param0} */
+/** 删除角色 DELETE /system/roles/${param0} */
 export async function roleDelete(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
+ // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.RoleDeleteParams,
   options?: RequestOptions,
 ) {
   const { id: param0, ...queryParams } = params;
-  return request<any>(`/api/system/roles/${param0}`, {
+  return request<any>(`/system/roles/${param0}`, {
     method: 'DELETE',
     params: { ...queryParams },
     ...(options || { successMsg: '删除成功' }),
