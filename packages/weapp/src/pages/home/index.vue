@@ -2,7 +2,7 @@
  * @Author: June
  * @Description: 
  * @Date: 2024-04-24 09:32:13
- * @LastEditTime: 2024-05-31 17:28:57
+ * @LastEditTime: 2024-06-18 08:27:28
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\weapp\src\pages\home\index.vue
 -->
@@ -50,10 +50,8 @@
 import Horoscope from './components/Horoscope.vue'
 // swiper start
 const imgsList = [
-  'https://3k2j857423.goho.co/uploads/w1.jpg',
-  'https://3k2j857423.goho.co/uploads/w2.jpg',
-  'https://3k2j857423.goho.co/uploads/fs.jpg',
-  'https://3k2j857423.goho.co/uploads/li.jpg'
+  'https://3k2j857423.goho.co/static/w2.jpg',
+  'https://3k2j857423.goho.co/static/li.jpg'
 ]
 const onSwiperClick = (data: { index: number }) => {
   uni.previewImage({

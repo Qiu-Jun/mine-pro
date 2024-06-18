@@ -3,7 +3,7 @@
  * @Description:
  * @Date: 2023-11-06 10:36:43
  * @LastEditors: June
- * @LastEditTime: 2024-06-15 17:24:12
+ * @LastEditTime: 2024-06-17 17:22:35
  */
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
@@ -41,8 +41,8 @@ async function bootstrap() {
   app.setGlobalPrefix(globalPrefix)
   app.useStaticAssets( {
     // 暂用  后面改回static
-    root: join(__dirname, '..', 'uploads'), // 静态资源目录
-    prefix: '/uploads/' // 访问静态资源的URL前缀
+    root: join(__dirname, '..', 'static'), // 静态资源目录
+    prefix: '/static/' // 访问静态资源的URL前缀
     // root: join(__dirname, '..', 'static'), // 静态资源目录
     // prefix: '/static' // 访问静态资源的URL前缀
   })
