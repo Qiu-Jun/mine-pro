@@ -2,9 +2,9 @@
  * @Author: June
  * @Description:
  * @Date: 2024-05-25 15:48:42
- * @LastEditTime: 2024-05-25 15:57:41
+ * @LastEditTime: 2024-06-19 10:23:02
  * @LastEditors: June
- * @FilePath: \@minepro\eslint.config.js
+ * @FilePath: \mine-pro\eslint.config.js
  */
 module.exports = {
   env: {
@@ -22,7 +22,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-essential',
     'plugin:prettier/recommended',
-    './.eslintrc-auto-import.json'
+    './packages/weaap/.eslintrc-auto-import.json'
   ],
   parserOptions: {
     ecmaVersion: 'latest',

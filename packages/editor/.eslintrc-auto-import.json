@@ -82,6 +82,10 @@
     "onTabItemTap": true,
     "onThemeChange": true,
     "onUnhandledRejection": true,
-    "onUnload": true
+    "onUnload": true,
+    "ExtractDefaultPropTypes": true,
+    "ExtractPropTypes": true,
+    "ExtractPublicPropTypes": true,
+    "WritableComputedRef": true
   }
 }

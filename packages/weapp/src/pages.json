@@ -5,6 +5,9 @@
       "style": {
         "navigationBarTitleText": "首页"
       }
+    },
+     {
+      "path": "pages/webview/index"
     }
   ],
   "subPackages": [

@@ -1,13 +1,12 @@
 <!--
  * @Author: June
  * @Description: 
- * @Date: 2024-05-27 16:25:58
- * @LastEditTime: 2024-06-19 09:37:24
+ * @Date: 2024-06-19 10:17:02
+ * @LastEditTime: 2024-06-19 14:52:27
  * @LastEditors: June
- * @FilePath: \mine-pro\packages\weapp\src\App.vue
+ * @FilePath: \mine-pro\packages\editor\src\App.vue
 -->
 <script setup lang="ts">
-import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
 import { updateMpWx } from '@/utils/update'
 import { useAppStore } from '@/store'
 
@@ -15,7 +14,7 @@ const appStore = useAppStore()
 
 onLaunch(async () => {
   const systemInfo = uni.getSystemInfoSync()
-  await appStore.setSystemInfo(systemInfo)
+  appStore.setSystemInfo(systemInfo)
   // console.log(appStore.systemInfo)
   // #ifdef MP-WEIXIN
   // 第三方时使用
