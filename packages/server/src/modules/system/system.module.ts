@@ -2,14 +2,14 @@
  * @Author: June
  * @Description:
  * @Date: 2024-06-05 17:27:00
- * @LastEditTime: 2024-06-15 16:02:08
+ * @LastEditTime: 2024-06-21 13:32:52
  * @LastEditors: June
  * @FilePath: \mine-pro\packages\server\src\modules\system\system.module.ts
  */
 import { Module } from '@nestjs/common'
 import { RouterModule } from '@nestjs/core'
-import { UserModule } from '../user/user.module'
 
+import { UserModule } from '../user/user.module'
 import { DeptModule } from './dept/dept.module'
 import { DictItemModule } from './dict-item/dict-item.module'
 import { DictTypeModule } from './dict-type/dict-type.module'
