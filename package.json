@@ -7,7 +7,6 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev:weapp": "pnpm run -C packages/weapp dev:mp-weixin",
-    "dev:server": "pnpm run -C packages/server start:dev",
     "dev:admin": "pnpm run -C packages/admin dev",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint --ext .vue,.js,.ts,.jsx,.tsx src --fix",
